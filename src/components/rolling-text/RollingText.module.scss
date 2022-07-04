@@ -1,0 +1,27 @@
+.text {
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 71px;
+    letter-spacing: 0;
+    text-align: center;
+    animation: roll-up 1.5s ease-in-out forwards;
+}
+
+@keyframes roll-up {
+    0% {
+        opacity: 0;
+        transform: translateY(+70%) rotateX(-90deg) scale3d(0.9, 0.9, 0.9);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0) scale3d(1, 1, 1);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0) scale3d(1, 1, 1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-70%) rotateX(90deg) scale3d(0.9, 0.9, 0.9);
+    }
+}
