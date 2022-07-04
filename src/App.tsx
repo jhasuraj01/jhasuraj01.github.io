@@ -3,7 +3,7 @@ import './App.scss';
 import { Route, Routes } from 'react-router-dom';
 import { Header } from './components/header/Header';
 
-const Home = React.lazy(() => import("./pages/Home"));
+const Home = React.lazy(() => import("./pages/Home/Home"));
 const Projects = React.lazy(() => import("./pages/Projects"));
 const Programming = React.lazy(() => import("./pages/Programming"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));

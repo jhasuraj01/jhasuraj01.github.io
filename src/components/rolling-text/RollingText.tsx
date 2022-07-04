@@ -7,10 +7,10 @@ interface RollingTextProps {
 
 export const RollingText = ({ sentences }: RollingTextProps) => {
     
-    let [ index ] = useState(0);
-    const [sentence, setSentence] = useState(sentences[index])
+    const [sentence, setSentence] = useState(sentences[0])
 
     useEffect(() => {
+        let index = 0;
         const interval = setInterval(() => {
             index = (index + 1) % sentences.length;
             setSentence(sentences[index])
