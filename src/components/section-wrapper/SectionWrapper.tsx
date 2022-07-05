@@ -12,6 +12,7 @@ const Wrapper = styled.div<WrapperProps>`
     min-height: ${props => props.height}px;
     background-color: ${props => props.fill ? 'var(--background-theme)' : 'var(--background)'};
     scroll-snap-align: start;
+    position: relative;
 `
 
 interface SectionWrapperProps {
