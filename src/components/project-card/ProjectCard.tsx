@@ -78,9 +78,9 @@ export const ProjectCard = ({ title, subtitle, links, tags, thumbnail }: Project
                     {tags ? <CardTags> {tags.map(tag => <Tag key={tag}>{tag}</Tag> )} </CardTags> : <></> }
                 </CardText>
                 <CardIcons>
-                    { links.project && <a href={links.project} target="_blank" rel="noopener noreferrer"><ArrowTopRight /></a> }
-                    { links.github && <a href={links.github} target="_blank" rel="noopener noreferrer"><GitHubSmall /></a> }
-                    { links.youtube && <a href={links.youtube} target="_blank" rel="noopener noreferrer"><VideoIcon /></a> }
+                    { links.project && <a className='hvr-buzz-out' href={links.project} target="_blank" rel="noopener noreferrer"><ArrowTopRight /></a> }
+                    { links.github && <a className='hvr-buzz-out' href={links.github} target="_blank" rel="noopener noreferrer"><GitHubSmall /></a> }
+                    { links.youtube && <a className='hvr-buzz-out' href={links.youtube} target="_blank" rel="noopener noreferrer"><VideoIcon /></a> }
                 </CardIcons>
             </CardDetail>
             <CardImage src={thumbnail}/>

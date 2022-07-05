@@ -2,7 +2,7 @@ import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper"
 
 export const ProblemSolving = () => {
     return (
-        <SectionWrapper fill={true}>
+        <SectionWrapper themeBg={true}>
             <div>Problem Solving</div>
         </SectionWrapper>
     )

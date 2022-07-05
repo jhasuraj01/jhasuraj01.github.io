@@ -3,6 +3,7 @@ import { ProjectCard, ProjectCardProps } from "../../components/project-card/Pro
 import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { ReactComponent as SpecialViewProjectIcon } from '../../assets/special-view-project.svg'
 import { Link } from "react-router-dom";
+import { useWindowSize } from "react-use";
 
 const projects: ProjectCardProps[] = [
     {
@@ -49,11 +50,10 @@ const projects: ProjectCardProps[] = [
 
 const SectionTitle = styled.div`
     /* Latest Projects */
-    position: absolute;
     width: 265px;
     height: 142px;
-    left: 64px;
-    top: 32px;
+    margin-left: 64px;
+    padding: 32px 0;
 
     font-family: 'Comfortaa';
     font-style: normal;
@@ -63,40 +63,62 @@ const SectionTitle = styled.div`
 `
 
 const Projects = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+`
+const Row = styled.div`
+    position: relative;
     display: flex;
     justify-content: space-evenly;
 `
-
 const Project = styled.div<{top: number}>`
-    position: relative;
-    top: ${props => props.top}%;
+    transform: translateY(${props => props.top}%);
 `
 
-const AllProjectsLink = styled(Link)`
-    position: absolute;
-    width: 171.48px;
-    height: 171.48px;
-    left: 1203px;
-    top: 498px;
-`
-
-export const LatestProjects = () => {
-
-    const m = -10;
+const ProjectRow = ({ projects }: { projects: ProjectCardProps[] }) => {
+    
+    const m = -20;
     const l = projects.length - 1;
     const displaceY = (i: number) => m*i - l*m/2;
 
     return (
-        <SectionWrapper fill={true}>
+        <Row>
+            {projects.map((project, i) => {
+                return <Project key={project.title} top={displaceY(i)}><ProjectCard {...project} /></Project>
+            })}
+        </Row>
+    )
+}
+
+const AllProjectsLink = styled(Link)`
+    position: relative;
+    top: -28px;
+    display: block;
+    width: 171.48px;
+    height: 171.48px;
+    margin: 56px 0;
+    margin-right: 120px;
+    margin-left: auto;
+`
+
+export const LatestProjects = () => {
+    const { width } = useWindowSize();
+    const maxCards = width > 1270 ? 4 : 2;
+
+    const projectGrid: ProjectCardProps[][] = [];
+    for(let row = 0; row < projects.length/maxCards; ++row) {
+        projectGrid.push([]);
+        for(let col = 0; col < maxCards; ++col) {
+            projectGrid[row].push(projects[row * maxCards + col]);
+        }
+    }
+
+    return (
+        <SectionWrapper themeBg={true}>
             <SectionTitle>Latest Projects</SectionTitle>
             <Projects>
-                {projects.map((project, i) => 
-                    <Project top={displaceY(i)}><ProjectCard key={project.title} {...project} /></Project>
-                )}
+                { projectGrid.map(projects => <ProjectRow key={projects[0].title} projects={projects} />) }
             </Projects>
             <AllProjectsLink to="projects">
                 <SpecialViewProjectIcon />
