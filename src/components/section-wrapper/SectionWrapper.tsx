@@ -11,7 +11,7 @@ const Wrapper = styled.div<WrapperProps>`
     min-width: ${props => props.width}px;
     min-height: ${props => props.height}px;
     background-color: ${props => props.themeBg ? 'var(--background-theme)' : 'var(--background)'};
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     position: relative;
 `
 
