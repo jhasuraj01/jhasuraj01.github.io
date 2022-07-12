@@ -8,7 +8,7 @@ const Card = styled.a`
     flex-direction: column;
     padding: 8px 0 0;
     gap: 16px;
-    width: 300px;
+    min-width: 300px;
     border-top: 2px solid var(--card-border);
 `
 const CardDetail = styled.div`
@@ -38,8 +38,10 @@ const CardSubTitle = styled.div`
 const CardTags = styled.div`
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 `
 const Tag = styled.div`
+    font-size: 14px;
     display: flex;
     padding: 8px 12px;
     color: var(--color-theme_deep);
@@ -53,8 +55,8 @@ const CardIcons = styled.div`
 `
 const CardImage = styled.img`
     box-sizing: border-box;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
 `
 

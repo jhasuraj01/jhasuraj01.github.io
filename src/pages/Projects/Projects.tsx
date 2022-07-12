@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { RollingText } from "../components/rolling-text/RollingText";
+import { RollingText } from "../../components/rolling-text/RollingText";
+import { projects } from "../../data/projects";
+import { ProjectCard } from "../../components/project-card/ProjectCard";
+import { SocialConnect } from "../Contact/SocialConnect";
+import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 
 const domain = [
     "Frontend Web Developmet",
@@ -25,12 +29,26 @@ const ProjectHeader = styled.div`
     margin: 132px auto;
 `
 
+const ProjectsContainer = styled(SectionWrapper)`
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 64px;
+    padding: 64px;
+`
+
 const Projects = () => {
     return (
+        <>
         <ProjectHeader>
             <SubTitle>Created 7+ Projects in various domain</SubTitle>
             <RollingText sentences={domain} />
         </ProjectHeader>
+        <ProjectsContainer themeBg={true}>
+            { projects.map(project => <ProjectCard {...project} /> )}
+        </ProjectsContainer>
+        <SocialConnect />
+        </>
     );
 }
 

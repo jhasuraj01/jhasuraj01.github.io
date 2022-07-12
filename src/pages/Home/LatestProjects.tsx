@@ -4,48 +4,7 @@ import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper"
 import { ReactComponent as SpecialViewProjectIcon } from '../../assets/special-view-project.svg'
 import { Link } from "react-router-dom";
 import { useWindowSize } from "react-use";
-
-const projects: ProjectCardProps[] = [
-    {
-        title: "Anorcle Notes - Cloud Project",
-        subtitle: "Full Stack / Serverless / DBMS",
-        links: {
-            project: "https://notes.anorcle.com/",
-        },
-        thumbnail: "https://clickup.com/blog/wp-content/uploads/2020/01/note-taking.png",
-        // tags: ["game", "react"]
-    },
-    {
-        title: "Online Sudoku Web Game",
-        subtitle: "Web Frontend / DSA",
-        links: {
-            project: "https://jhasuraj.com/sudoku/",
-            github: "https://github.com/jhasuraj01/sudoku"
-        },
-        thumbnail: "https://t4.ftcdn.net/jpg/00/01/31/81/360_F_1318176_WoOuwog3nfY4wpCiaxLqjbzrEk7MNt.jpg",
-        // tags: ["game", "react"]
-    },
-    {
-        title: "DSA - NPM Package (Ts/Js)",
-        subtitle: "Open Source / DSA",
-        links: {
-            project: "https://www.npmjs.com/package/@anorcle/dsa",
-            github: "https://github.com/anorcle/dsa"
-        },
-        thumbnail: "https://images-na.ssl-images-amazon.com/images/I/51Nv6BP9YSL.jpg",
-        // tags: ["game", "react"]
-    },
-    {
-        title: "College Event Certification",
-        subtitle: "Web Backend / DBMS",
-        links: {
-            project: "https://eventspccoe.web.app/",
-            youtube: "https://youtu.be/3Odx0EeYmmQ"
-        },
-        thumbnail: "https://admissions.cofc.edu/explore/campusvisits/events/header-events-02.jpg",
-        // tags: ["game", "react"]
-    }
-]
+import { projects } from "../../data/projects";
 
 const SectionTitle = styled.div`
     /* Latest Projects */
@@ -72,6 +31,7 @@ const Row = styled.div`
     justify-content: space-evenly;
 `
 const Project = styled.div<{top: number}>`
+    width: 300px;
     transform: translateY(${props => props.top}%);
 `
 
@@ -106,10 +66,12 @@ export const LatestProjects = () => {
     const maxCards = width > 1270 ? 4 : 2;
 
     const projectGrid: ProjectCardProps[][] = [];
-    for(let row = 0; row < projects.length/maxCards; ++row) {
+    const selectedProjects = projects.slice(0, 4);
+    console.log(selectedProjects)
+    for(let row = 0; row < selectedProjects.length/maxCards; ++row) {
         projectGrid.push([]);
         for(let col = 0; col < maxCards; ++col) {
-            projectGrid[row].push(projects[row * maxCards + col]);
+            projectGrid[row].push(selectedProjects[row * maxCards + col]);
         }
     }
 
