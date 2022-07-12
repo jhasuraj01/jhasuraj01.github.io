@@ -3,7 +3,7 @@ import { ReactComponent as ArrowTopRight } from '../../assets/arrow-top-right.sv
 import { ReactComponent as GitHubSmall } from '../../assets/github-small.svg'
 import { ReactComponent as VideoIcon } from '../../assets/video-icon.svg'
 
-const Card = styled.div`
+const Card = styled.a`
     display: flex;
     flex-direction: column;
     padding: 8px 0 0;
@@ -52,8 +52,10 @@ const CardIcons = styled.div`
     gap: 10px;
 `
 const CardImage = styled.img`
+    box-sizing: border-box;
     width: 300px;
     height: 200px;
+    object-fit: cover;
 `
 
 export interface ProjectCardProps {
@@ -70,7 +72,7 @@ export interface ProjectCardProps {
 
 export const ProjectCard = ({ title, subtitle, links, tags, thumbnail }: ProjectCardProps) => {
     return (
-        <Card>
+        <Card href={links.project} target="new" rel="noopener noreferrer">
             <CardDetail>
                 <CardText>
                     <CardTitle>{title}</CardTitle>
@@ -83,7 +85,7 @@ export const ProjectCard = ({ title, subtitle, links, tags, thumbnail }: Project
                     { links.youtube && <a className='hvr-buzz-out' href={links.youtube} target="_blank" rel="noopener noreferrer"><VideoIcon /></a> }
                 </CardIcons>
             </CardDetail>
-            <CardImage src={thumbnail}/>
+            <CardImage src={thumbnail} loading='lazy'/>
         </Card>
     );
 }

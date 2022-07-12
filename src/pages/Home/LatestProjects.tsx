@@ -7,6 +7,15 @@ import { useWindowSize } from "react-use";
 
 const projects: ProjectCardProps[] = [
     {
+        title: "Anorcle Notes - Cloud Project",
+        subtitle: "Full Stack / Serverless / DBMS",
+        links: {
+            project: "https://notes.anorcle.com/",
+        },
+        thumbnail: "https://clickup.com/blog/wp-content/uploads/2020/01/note-taking.png",
+        // tags: ["game", "react"]
+    },
+    {
         title: "Online Sudoku Web Game",
         subtitle: "Web Frontend / DSA",
         links: {
@@ -17,33 +26,23 @@ const projects: ProjectCardProps[] = [
         // tags: ["game", "react"]
     },
     {
-        title: "Online Sudoku Web Game 2",
-        subtitle: "Web Frontend / DSA",
+        title: "DSA - NPM Package (Ts/Js)",
+        subtitle: "Open Source / DSA",
         links: {
-            project: "https://jhasuraj.com/sudoku/",
-            github: "https://github.com/jhasuraj01/sudoku"
+            project: "https://www.npmjs.com/package/@anorcle/dsa",
+            github: "https://github.com/anorcle/dsa"
         },
-        thumbnail: "https://t4.ftcdn.net/jpg/00/01/31/81/360_F_1318176_WoOuwog3nfY4wpCiaxLqjbzrEk7MNt.jpg",
+        thumbnail: "https://images-na.ssl-images-amazon.com/images/I/51Nv6BP9YSL.jpg",
         // tags: ["game", "react"]
     },
     {
-        title: "Online Sudoku Web Game 3",
-        subtitle: "Web Frontend / DSA",
+        title: "College Event Certification",
+        subtitle: "Web Backend / DBMS",
         links: {
-            project: "https://jhasuraj.com/sudoku/",
-            github: "https://github.com/jhasuraj01/sudoku"
+            project: "https://eventspccoe.web.app/",
+            youtube: "https://youtu.be/3Odx0EeYmmQ"
         },
-        thumbnail: "https://t4.ftcdn.net/jpg/00/01/31/81/360_F_1318176_WoOuwog3nfY4wpCiaxLqjbzrEk7MNt.jpg",
-        // tags: ["game", "react"]
-    },
-    {
-        title: "Online Sudoku Web Game 4",
-        subtitle: "Web Frontend / DSA",
-        links: {
-            project: "https://jhasuraj.com/sudoku/",
-            github: "https://github.com/jhasuraj01/sudoku"
-        },
-        thumbnail: "https://t4.ftcdn.net/jpg/00/01/31/81/360_F_1318176_WoOuwog3nfY4wpCiaxLqjbzrEk7MNt.jpg",
+        thumbnail: "https://admissions.cofc.edu/explore/campusvisits/events/header-events-02.jpg",
         // tags: ["game", "react"]
     }
 ]
