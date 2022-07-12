@@ -41,7 +41,7 @@ const Projects = () => {
     return (
         <>
         <ProjectHeader>
-            <SubTitle>Created 7+ Projects in various domain</SubTitle>
+            <SubTitle>Created 10+ Projects in various domain</SubTitle>
             <RollingText sentences={domain} />
         </ProjectHeader>
         <ProjectsContainer themeBg={true}>
