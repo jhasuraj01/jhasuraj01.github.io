@@ -7,8 +7,8 @@ export const Header = () => {
             <div className={styles.title}>suraj.</div>
             <div className={styles.nav}>
                 <NavItem link='/' text='home' />
-                <NavItem link='/gallery' text='gallery' />
-                <NavItem link='/programming' text='programming' />
+                {/* <NavItem link='/gallery' text='gallery' /> */}
+                {/* <NavItem link='/programming' text='programming' /> */}
                 <NavItem link='/projects' text='projects' />
                 <NavItem link='/contact' text='contact' />
             </div>

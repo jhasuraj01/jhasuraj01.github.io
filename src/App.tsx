@@ -7,7 +7,7 @@ const Home = React.lazy(() => import("./pages/Home/Home"));
 const Projects = React.lazy(() => import("./pages/Projects"));
 const Programming = React.lazy(() => import("./pages/Programming"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));
-const Contact = React.lazy(() => import("./pages/Contact"));
+const Contact = React.lazy(() => import("./pages/Contact/Contact"));
 
 function App() {
   return (

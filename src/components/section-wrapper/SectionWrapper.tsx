@@ -18,11 +18,12 @@ const Wrapper = styled.div<WrapperProps>`
 interface SectionWrapperProps {
     children?: ReactNode
     themeBg?: boolean
+    className?: string
 }
-export const SectionWrapper = ({ children, themeBg = false }: SectionWrapperProps) => {
+export const SectionWrapper = ({ children, themeBg = false, className }: SectionWrapperProps) => {
     const {width, height} = useWindowSize();
     return (
-        <Wrapper width={width} height={height} themeBg={themeBg}>
+        <Wrapper width={width} height={height} themeBg={themeBg} className={className}>
             {children}
         </Wrapper>
     )

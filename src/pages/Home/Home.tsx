@@ -2,12 +2,13 @@
 import { useWindowSize } from "react-use";
 import styled from "styled-components";
 import { RollingText } from "../../components/rolling-text/RollingText";
+import { SocialConnect } from "../Contact/SocialConnect";
 import { Experience } from "./Experience";
 import { HomeHeader } from "./HomeHeader";
 import { HomeHighlights } from "./HomeHighlights";
 import { LatestProjects } from "./LatestProjects";
 import { ProblemSolving } from "./ProblemSolving";
-import { SkillGraph } from "./SkillGraph";
+// import { SkillGraph } from "./SkillGraph";
 
 const ilike = [
     "I like Photography!",
@@ -36,7 +37,8 @@ const Home = () => {
         <LatestProjects />
         <Experience />
         <ProblemSolving />
-        <SkillGraph />
+        {/* <SkillGraph /> */}
+        <SocialConnect />
         </>
     );
 }
