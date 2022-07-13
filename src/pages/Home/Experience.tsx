@@ -1,31 +1,38 @@
+import { useWindowSize } from "react-use";
 import styled from "styled-components";
 import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 
-const Container = styled.div`
+const Container = styled.div<{windowWidth: number}>`
     display: flex;
-    gap: 64px;
-    padding: 0 64px;
+    flex-direction: ${({ windowWidth }) => windowWidth < 1000 ? 'column' : 'row' };
+    gap: ${({ windowWidth }) => windowWidth < 1000 ? 0 : '64px' };
+    padding: ${({ windowWidth }) => windowWidth < 1000 ? '64px 0' : '0 64px' };
 `
 const TitleContainer = styled.div`
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    flex: 0 0 120px;
     overflow: hidden;
+    @media (min-width: 1000px) {
+        height: 100vh;
+        flex: 0 0 120px;
+        position: sticky;
+        top: 0;
+    }
 `
-const SectionTitle = styled.div`
-    position: absolute;
+const SectionTitle = styled.div<{windowWidth: number}>`
     display: inline-block;
-    top: 50%;
-    left: 50%;
-
-    font-style: normal;
     font-weight: 700;
-    font-size: 15vh;
-    line-height: 107px;
- 
-    transform: translate3d(-50%,-50%,0) rotate(-90deg);;
-    transform-origin: 50% 50%;
+    font-size: 12vw;
+    padding: 0 16px;
+
+    @media (min-width: 1000px) {
+        padding: 0;
+        font-weight: 700;
+        font-size: min(15vh, 128px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0) rotate(-90deg);
+        transform-origin: 50% 50%;
+    }
 `
 const ExperienceContainer = styled.div`
     padding: 64px 0;
@@ -35,12 +42,22 @@ const ExperienceContainer = styled.div`
 
 const PositionContainer = styled.div`
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 0;
     border-top: 2px solid currentColor;
     padding: 16px 32px;
+
+    @media (min-width: 1000px) {
+        flex-direction: row;
+        gap: 24px;
+    }
 `
 const WorkDate = styled.div`
-    flex: 0 0 160px;
+    margin: 12px 2px;
+    @media (min-width: 1000px) {
+        margin: 0;
+        flex: 0 0 160px;
+    }
 `
 const WorkDetails = styled.div`
     flex-grow: 1;
@@ -62,10 +79,8 @@ const WorkRole = styled.div`
     font-size: 24px;
     line-height: 27px;
 `
-const WorkDescription = styled.ul``
-const WorkDescriptionPoint = styled.li``
 const WorkLocation = styled.div`
-text-align: right;
+    text-align: right;
 `
 
 export interface PositionProps {
@@ -83,9 +98,9 @@ const Position = ({ date, company, role, description, location }: PositionProps)
             <WorkDetails>
                 <WorkCompany>{company}</WorkCompany>
                 <WorkRole>{role}</WorkRole>
-                <WorkDescription>
-                    {description.map(point => <WorkDescriptionPoint key={point}>{point}</WorkDescriptionPoint>)}
-                </WorkDescription>
+                <ul>
+                    {description.map(point => <li key={point}>{point}</li>)}
+                </ul>
                 <WorkLocation>{location}</WorkLocation>
             </WorkDetails>
         </PositionContainer>
@@ -125,11 +140,12 @@ const positions: PositionProps[] = [
 ]
 
 export const Experience = () => {
+    const { width } = useWindowSize();
     return (
         <SectionWrapper>
-            <Container>
+            <Container windowWidth={width}>
                 <TitleContainer>
-                    <SectionTitle>Experience</SectionTitle>
+                    <SectionTitle windowWidth={width}>Experience</SectionTitle>
                 </TitleContainer>
                 <ExperienceContainer>
                     {positions.map(position => <Position key={position.company} {...position} />)}
