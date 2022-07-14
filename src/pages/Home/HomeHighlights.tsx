@@ -6,12 +6,19 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 0 64px;
+    @media (max-width: 600px) {
+        margin: 0 24px;
+    }
 `
 
 const HighlightsLeft = styled.div`
     display: flex;
     flex-direction: column;
     gap: 56px;
+
+    @media (max-width: 600px) {
+        gap: 36px;
+    }
 `
 
 const HighlightsRight = styled.div`
@@ -19,6 +26,10 @@ const HighlightsRight = styled.div`
     flex-direction: column;
     gap: 56px;
     align-items: flex-end;
+    
+    @media (max-width: 600px) {
+        gap: 36px;
+    }
 `
 
 export const HomeHighlights = () => {

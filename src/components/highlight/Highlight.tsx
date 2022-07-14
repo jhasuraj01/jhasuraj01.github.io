@@ -15,6 +15,7 @@ const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: column;
     align-items: ${props => props.align === 'right' ? 'flex-end' : 'flex-start'};
+    text-align: ${props => props.align};
     gap: 9px;
 `
 
@@ -23,7 +24,10 @@ const Text = styled.div`
     font-weight: 400;
     line-height: 27px;
     letter-spacing: 0em;
-    text-align: center;
+
+    @media (max-width: 600px) {
+        font-size: max(4vw, 16px);
+    }
 `
 
 const Data = styled.div`
@@ -32,6 +36,10 @@ const Data = styled.div`
     line-height: 71px;
     letter-spacing: 0em;
     text-align: center;
+    
+    @media (max-width: 600px) {
+        font-size: max(10vw, 36px);
+    }
 `
 
 export const Highlight = ({ text, data, align = 'left' }: HighlightProps) => {

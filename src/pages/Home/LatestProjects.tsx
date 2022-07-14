@@ -7,32 +7,41 @@ import { useWindowSize } from "react-use";
 import { projects } from "../../data/projects";
 
 const SectionTitle = styled.div`
-    /* Latest Projects */
-    width: 265px;
-    height: 142px;
-    margin-left: 64px;
-    padding: 32px 0;
 
-    font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 71px;
+    font-size: max(10vw, 32px);
+    padding: max(10vw, 32px) 0;
+    text-align: center;
+
+    @media (min-width: 744px) {
+        width: 265px;
+        height: 142px;
+        font-size: 64px;
+        font-weight: 700;
+        padding: 32px 0;
+        margin-left: 64px;
+        text-align: left;
+    }
 `
 
 const Projects = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 128px;
+    gap: 48px;
 `
 const Row = styled.div`
     position: relative;
     display: flex;
     justify-content: space-evenly;
+    gap: 48px;
+    padding: 0 48px;
+    flex-wrap: wrap;
 `
 const Project = styled.div<{top: number}>`
-    width: 300px;
-    transform: translateY(${props => props.top}%);
+    flex: 1 0 300px;
+    max-width: 400px;
+    @media (min-width: 744px) {
+        transform: translateY(${props => props.top}%);
+    }
 `
 
 const ProjectRow = ({ projects }: { projects: ProjectCardProps[] }) => {
@@ -57,13 +66,17 @@ const AllProjectsLink = styled(Link)`
     width: 171.48px;
     height: 171.48px;
     margin: 56px 0;
-    margin-right: 120px;
     margin-left: auto;
+    margin-right: 20%;
+
+    @media (min-width: 744px) {
+        margin-right: 120px;
+    }
 `
 
 export const LatestProjects = () => {
     const { width } = useWindowSize();
-    const maxCards = width > 1270 ? 4 : 2;
+    const maxCards = width > 1450 ? 4 : 2;
 
     const projectGrid: ProjectCardProps[][] = [];
     const selectedProjects = projects.slice(0, 4);

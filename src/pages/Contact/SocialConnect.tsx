@@ -12,6 +12,10 @@ const Wraper = styled(SectionWrapper)`
     flex-direction: column;
     gap: 128px;
     padding: 128px 64px;
+    
+    @media (max-width: 600px) {
+        padding: 128px 0;
+    }
 `
 const SectionHeader = styled.div`
     display: flex;

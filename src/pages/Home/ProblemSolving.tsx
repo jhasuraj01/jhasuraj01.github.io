@@ -4,15 +4,25 @@ import styled from "styled-components";
 
 const SectionTitle = styled.div`
     padding: 72px 0;
-    text-align: center;
     font-weight: 700;
     font-size: 64px;
+    text-align: center;
+
+    @media (max-width: 650px) {
+        font-size: max(10vw, 32px);
+        padding: max(10vw, 32px) 0;
+    }
 `
 const SectionHighlight = styled.div`
     padding: 72px 0;
     text-align: center;
     font-weight: 400;
     font-size: 64px;
+    
+    @media (max-width: 650px) {
+        font-size: max(10vw, 32px);
+        padding: max(10vw, 32px) 0;
+    }
 `
 
 const ratings = [
@@ -46,11 +56,21 @@ const ProblemStats = styled.div`
     display: flex;
     align-items: center;
     gap: 24px;
+    @media (max-width: 650px) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 0 32px;
+    }
 `
 const StatsText = styled.div`
     flex: 0 1 400px;
     display: flex;
     justify-content: space-between;
+    
+    @media (max-width: 650px) {
+        flex: auto;
+    }
 `
 const PlatformName = styled.div`
     font-size: 20px;

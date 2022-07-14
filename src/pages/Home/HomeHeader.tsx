@@ -18,6 +18,8 @@ const Profile = styled.img`
     display: block;
     width: 400px;
     height: 400px;
+    max-width: 90vw;
+    max-height: 90vw;
     border-radius: 200px;
     margin: 32px auto;
 `
