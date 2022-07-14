@@ -1,6 +1,11 @@
 .header {
     margin: 24px 64px;
     display: flex;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        margin: 0 24px;
+    }
 }
 
 .title {
