@@ -6,11 +6,11 @@ import { SocialConnect } from "../Contact/SocialConnect";
 import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 
 const domain = [
-    "Frontend Web Developmet",
-    "Full Stack Web Developmet",
-    "Cloud Driven Applications",
-    "BlockChain Based Apps",
-    "UI & UX Design"
+    "Frontend Web",
+    "Full Stack",
+    "Cloud",
+    "BlockChain",
+    "UI & UX"
 ]
 
 const SubTitle = styled.div`
