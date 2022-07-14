@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import styled from "styled-components"
 
 const Wrapper = styled.a`
@@ -21,10 +21,20 @@ const TextWrapper = styled.div`
 const CardTitle = styled.div`
     font-weight: 500;
     font-size: 14px;
+    @media (max-width: 400px) {
+        font-size: 13px;
+    }
 `
 const CardValue = styled.div`
     font-weight: 400;
     font-size: 20px;
+    text-overflow: ellipsis;
+    @media (max-width: 400px) {
+        font-size: 16px;
+    }
+`
+const IconContainer = styled.div`
+    flex-shrink: 0;
 `
 
 export interface SocialLinkProps {
@@ -37,7 +47,9 @@ export interface SocialLinkProps {
 export const SocialLink = ({ link, title, value, icon: Icon }: SocialLinkProps) => {
     return (
         <Wrapper href={link} target="new" rel="noopener noreferrer">
-            <Icon />
+            <IconContainer>
+                <Icon />
+            </IconContainer>
             <TextWrapper>
                 <CardTitle>{title}</CardTitle>
                 <CardValue>{value}</CardValue>

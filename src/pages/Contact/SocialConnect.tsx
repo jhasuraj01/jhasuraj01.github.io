@@ -37,7 +37,7 @@ const SectionTitle = styled.div`
 
 const SocialLinkContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100vw), 1fr));
     gap: 40px;
 `
 
