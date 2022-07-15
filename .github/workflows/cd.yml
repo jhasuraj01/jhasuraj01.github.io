@@ -16,9 +16,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18.x
-      - run: |
-          git config --global user.email "44930179+jhasuraj01@users.noreply.github.com"
-          git config --global user.name "jhasuraj01"
+      - name: Build Project
+        run: |
           npm i
           npm run build
       - name: Deploy to GitHub Pages
