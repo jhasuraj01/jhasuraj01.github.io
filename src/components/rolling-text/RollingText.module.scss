@@ -1,0 +1,35 @@
+.text {
+    font-size: 48px;
+    font-weight: 200;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 28px 0;
+    animation: roll-up 1.5s ease-in-out forwards;
+
+    @media (max-width: 600px){
+        font-size: 36px;
+    }
+
+    @media (max-width: 400px){
+        font-size: 28px;
+    }
+}
+
+@keyframes roll-up {
+    0% {
+        opacity: 0;
+        transform: translateY(+70%) rotateX(-90deg) scale3d(0.9, 0.9, 0.9);
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0) scale3d(1, 1, 1);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0) scale3d(1, 1, 1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-70%) rotateX(90deg) scale3d(0.9, 0.9, 0.9);
+    }
+}
