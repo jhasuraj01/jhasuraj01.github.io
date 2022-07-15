@@ -21,7 +21,7 @@ jobs:
           git config --global user.name "jhasuraj01"
           npm i
           npm run build
-        name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
