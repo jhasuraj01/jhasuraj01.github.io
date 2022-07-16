@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Highlight } from "../../components/highlight/Highlight";
+import totalProblems from "./addons/totalProblems";
 
 const Wrapper = styled.div`
     display: flex;
@@ -42,7 +43,7 @@ export const HomeHighlights = () => {
             </HighlightsLeft>
             <HighlightsRight>
                 <Highlight text="Games Developed" data="+2" align="right" />
-                <Highlight text="DSA Problems Solved" data="+400" align="right" />
+                <Highlight text="DSA Problems Solved" data={`+${totalProblems()}`} align="right" />
                 <Link to="/projects"><Highlight text="Projects" data="+10" align="right" /></Link>
             </HighlightsRight>
         </Wrapper>

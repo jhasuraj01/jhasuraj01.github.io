@@ -2,6 +2,7 @@ import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper"
 import { ProgressBar } from "../../components/progress/ProgressBar";
 import styled from "styled-components";
 import ratings from "../../data/programming.json"
+import totalProblems from "./addons/totalProblems";
 
 const SectionTitle = styled.div`
     padding: 72px 0;
@@ -75,7 +76,7 @@ export const ProblemSolving = () => {
             <SectionTitle>Problem Solving</SectionTitle>
             <StatsContainer>
                 <StatsDescription>
-                    <strong>400+</strong> Quality Problems solved on Various Platforms
+                    <strong>{totalProblems()}+</strong> Quality Problems solved on Various Platforms
                 </StatsDescription>
                 {ratings.map(rating => {
                     return (
