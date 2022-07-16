@@ -1,6 +1,7 @@
 import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { ProgressBar } from "../../components/progress/ProgressBar";
 import styled from "styled-components";
+import ratings from "../../data/programming.json"
 
 const SectionTitle = styled.div`
     padding: 72px 0;
@@ -24,25 +25,6 @@ const SectionHighlight = styled.div`
         padding: max(10vw, 32px) 0;
     }
 `
-
-const ratings = [
-    {
-        platform: 'LeetCode',
-        problemsCount: 174,
-    },
-    {
-        platform: 'CodeChef',
-        problemsCount: 170,
-    },
-    {
-        platform: 'GeeksForGeeks',
-        problemsCount: 66,
-    },
-    {
-        platform: 'CodeForces',
-        problemsCount: 27,
-    },
-]
 
 const StatsContainer = styled.div`
     display: flex;
