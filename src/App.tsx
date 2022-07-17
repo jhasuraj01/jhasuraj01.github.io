@@ -8,7 +8,7 @@ const Home = React.lazy(() => import("./pages/Home/Home"));
 const Projects = React.lazy(() => import("./pages/Projects/Projects"));
 const Programming = React.lazy(() => import("./pages/Programming"));
 const Gallery = React.lazy(() => import("./pages/Gallery"));
-const Contact = React.lazy(() => import("./pages/Contact/Contact"));
+const Links = React.lazy(() => import("./pages/Links/Links"));
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path='/gallery' element={<Suspense><Gallery /></Suspense>} />
         <Route path='/programming' element={<Suspense><Programming /></Suspense>} />
         <Route path='/projects' element={<Suspense><Projects /></Suspense>} />
-        <Route path='/contact' element={<Suspense><Contact /></Suspense>} />
+        <Route path='/links' element={<Suspense><Links /></Suspense>} />
       </Routes>
       <Footer />
     </>

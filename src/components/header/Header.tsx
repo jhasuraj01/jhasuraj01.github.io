@@ -10,7 +10,7 @@ export const Header = () => {
                 {/* <NavItem link='/gallery' text='gallery' /> */}
                 {/* <NavItem link='/programming' text='programming' /> */}
                 <NavItem link='/projects' text='projects' />
-                <NavItem link='/contact' text='contact' />
+                <NavItem link='/links' text='links' />
             </div>
         </header>
     );

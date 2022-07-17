@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { RollingText } from "../../components/rolling-text/RollingText";
 import { projects } from "../../data/projects";
 import { ProjectCard } from "../../components/project-card/ProjectCard";
-import { SocialConnect } from "../Contact/SocialConnect";
+import { SocialConnect } from "../Links/SocialConnect";
 import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 
 const domain = [

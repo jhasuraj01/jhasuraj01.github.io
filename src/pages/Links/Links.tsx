@@ -1,7 +1,7 @@
 import { PublicProfile } from "./PublicProfiles";
 import { SocialConnect } from "./SocialConnect";
 
-const Contact = () => {
+const Links = () => {
     return (
         <>
         <PublicProfile />
@@ -10,4 +10,4 @@ const Contact = () => {
     );
 }
 
-export default Contact;
+export default Links;

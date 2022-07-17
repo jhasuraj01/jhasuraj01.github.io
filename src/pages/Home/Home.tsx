@@ -2,7 +2,7 @@
 import { useWindowSize } from "react-use";
 import styled from "styled-components";
 import { RollingText } from "../../components/rolling-text/RollingText";
-import { SocialConnect } from "../Contact/SocialConnect";
+import { SocialConnect } from "../Links/SocialConnect";
 import { Experience } from "./Experience";
 import { HomeHeader } from "./HomeHeader";
 import { HomeHighlights } from "./HomeHighlights";
