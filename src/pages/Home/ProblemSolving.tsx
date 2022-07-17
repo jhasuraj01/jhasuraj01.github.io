@@ -1,7 +1,7 @@
 import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { ProgressBar } from "../../components/progress/ProgressBar";
 import styled from "styled-components";
-import ratings from "../../data/programming.json"
+import { ratings } from "../../data/programming";
 import totalProblems from "./addons/totalProblems";
 
 const SectionTitle = styled.div`

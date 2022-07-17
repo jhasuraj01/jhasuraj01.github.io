@@ -1,4 +1,4 @@
-import ratings from "../../../data/programming.json";
+import { ratings } from "../../../data/programming";
 
 const totalProblems = (): number => {
     let total_problems = 0;

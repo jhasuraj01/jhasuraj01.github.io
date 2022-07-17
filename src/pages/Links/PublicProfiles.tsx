@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ProfileLink } from "../../components/profile-link/ProfileLink";
-import profiles from "../../data/profiles.json";
+import { profiles } from "../../data/profiles";
 
 const Wraper = styled.div`
     box-sizing: border-box;
