@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react";
 import styled from "styled-components"
 
 const Wrapper = styled.a`

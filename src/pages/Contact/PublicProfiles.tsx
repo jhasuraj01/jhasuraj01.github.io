@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { ProfileLink } from "../../components/profile-link/ProfileLink";
-import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import profiles from "../../data/profiles.json";
 
 const Wraper = styled.div`
