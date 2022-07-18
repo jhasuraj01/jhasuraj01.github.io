@@ -15,15 +15,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18.x
-      - name: Build Project
+      - name: Update Data
         run: |
           npm i
           npm run update-data
-          npm run build
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: gh-pages
-          build_dir: build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "jhasuraj01"
+          git config --global user.email "44930179+jhasuraj01@users.noreply.github.com"
+          git add -A
+          git commit -m "Updated Data"
+          git push
