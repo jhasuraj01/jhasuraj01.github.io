@@ -8,12 +8,12 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--color);
 }
 
 
 * {
   font-family: 'Comfortaa', system-ui;
-  color: var(--color);
 }
 
 .light {
@@ -31,6 +31,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 
