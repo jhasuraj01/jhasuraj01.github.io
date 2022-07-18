@@ -80,7 +80,7 @@ export const LatestProjects = () => {
 
     const projectGrid: ProjectCardProps[][] = [];
     const selectedProjects = projects.slice(0, 4);
-    console.log(selectedProjects)
+
     for(let row = 0; row < selectedProjects.length/maxCards; ++row) {
         projectGrid.push([]);
         for(let col = 0; col < maxCards; ++col) {
