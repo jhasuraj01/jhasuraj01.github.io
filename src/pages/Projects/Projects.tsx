@@ -35,6 +35,10 @@ const ProjectsContainer = styled(SectionWrapper)`
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 64px;
     padding: 64px;
+
+    @media (max-width: 428px) {
+        padding: 32px;
+    }
 `
 
 const Projects = () => {
