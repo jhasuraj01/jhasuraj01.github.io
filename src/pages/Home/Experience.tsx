@@ -44,7 +44,7 @@ const PositionContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0;
-    border-top: 2px solid currentColor;
+    border-top: 2px solid var(--card-border);
     padding: 16px 32px;
 
     @media (min-width: 1000px) {
