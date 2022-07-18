@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Highlight } from "../../components/highlight/Highlight";
-import totalProblems from "./addons/totalProblems";
+import totalProblems from "./utils/totalProblems";
 
 const Wrapper = styled.div`
     display: flex;

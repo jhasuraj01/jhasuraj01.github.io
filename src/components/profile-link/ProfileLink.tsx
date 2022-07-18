@@ -27,6 +27,7 @@ const ProfileSubTitle = styled.div`
 `
 const ProfileDescription = styled.div`
     font-size: 16px;
+    text-transform: capitalize;
 `
 const ProfileValue = styled.div`
     font-size: 20px;
