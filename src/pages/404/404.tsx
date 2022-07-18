@@ -2,8 +2,10 @@ import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
+    box-sizing: border-box;
     display: flex;
     gap: 48px;
+    padding: 16px;
     flex-direction: column;
     justify-content: center;
     align-content: center;
