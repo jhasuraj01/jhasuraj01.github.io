@@ -3,6 +3,7 @@ import { ProgressBar } from "../../components/progress/ProgressBar";
 import styled from "styled-components";
 import { ratings } from "../../data/programming";
 import totalProblems from "./addons/totalProblems";
+import variables from "../../data/variables.json"
 
 const SectionTitle = styled.div`
     padding: 72px 0;
@@ -90,7 +91,7 @@ export const ProblemSolving = () => {
                     )
                 })}
             </StatsContainer>
-            <SectionHighlight>4★ on CodeChef</SectionHighlight>
+            <SectionHighlight>{variables.codechef.stars} on CodeChef</SectionHighlight>
             
         </SectionWrapper>
     )

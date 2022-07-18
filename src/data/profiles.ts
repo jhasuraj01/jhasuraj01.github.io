@@ -6,14 +6,14 @@ export const profiles: ProfileLinkProps[] = [
         link: "https://codechef.jhasuraj.com",
         title: "CodeChef",
         subtitle: "Competitive Programming",
-        description: "4 Star, Max Rating: 1938",
+        description: `${variables.codechef.stars.slice(0, -1)} Star, Max Rating: ${variables.codechef.maxRating}`,
         value: "@jhasuraj"
     },
     {
         link: "https://codeforces.jhasuraj.com",
         title: "CodeForces",
         subtitle: "Competitive Programming",
-        description: "Pupil, Max Rating: 1275",
+        description: `${variables.codeforces.rank}, Max Rating: ${variables.codeforces.maxRating}`,
         value: "@jhasuraj01"
     },
     {
