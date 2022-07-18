@@ -37,7 +37,7 @@ const ProjectsContainer = styled(SectionWrapper)`
     padding: 64px;
 
     @media (max-width: 428px) {
-        padding: 32px;
+        padding: 64px 32px;
     }
 `
 
