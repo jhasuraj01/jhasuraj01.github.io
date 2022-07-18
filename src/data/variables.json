@@ -1,8 +1,18 @@
 {
     "leetcode": {
-        "problems": 179
+        "problemsCount": 179
     },
     "gfg": {
-        "problems": 66
+        "problemsCount": 66
+    },
+    "codechef": {
+        "maxRating": 1938,
+        "problemsCount": 174,
+        "stars": "4★"
+    },
+    "codeforces": {
+        "maxRating": 1275,
+        "problemsCount": 33,
+        "rank": "pupil"
     }
 }

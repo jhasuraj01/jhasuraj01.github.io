@@ -3,19 +3,19 @@ import variables from './variables.json';
 export const ratings = [
     {
         "platform": "LeetCode",
-        "problemsCount": variables.leetcode.problems
+        "problemsCount": variables.leetcode.problemsCount
     },
     {
         "platform": "CodeChef",
-        "problemsCount": 170
+        "problemsCount": variables.codechef.problemsCount
     },
     {
         "platform": "GeeksForGeeks",
-        "problemsCount": variables.gfg.problems
+        "problemsCount": variables.gfg.problemsCount
     },
     {
         "platform": "CodeForces",
-        "problemsCount": 33
+        "problemsCount": variables.codeforces.problemsCount
     },
     {
         "platform": "InterviewBit",

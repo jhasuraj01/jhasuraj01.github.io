@@ -1,0 +1,14 @@
+{
+    "type": "module",
+    "main": "./dist/index.js",
+    "private": "true",
+    "scripts": {
+        "build": "rm -fr ./dist/** && npx tsc",
+        "prefetch": "npm i && npm run build",
+        "fetch": "node .",
+        "postfetch": "rm -fr ./dist"
+    },
+    "dependencies": {
+        "node-fetch": "^3.2.8"
+    }
+}

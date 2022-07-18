@@ -20,7 +20,7 @@ export const profiles: ProfileLinkProps[] = [
         link: "https://leetcode.jhasuraj.com",
         title: "LeetCode",
         subtitle: "DSA Practice",
-        description: `Total Problems Solved: ${variables.leetcode.problems}`,
+        description: `Total Problems Solved: ${variables.leetcode.problemsCount}`,
         value: "@jhasuraj01"
     },
     {
@@ -41,7 +41,7 @@ export const profiles: ProfileLinkProps[] = [
         link: "https://geeksforgeeks.jhasuraj.com",
         title: "GeeksforGeeks",
         subtitle: "DSA Practice",
-        description: `Total Problems Solved: ${variables.gfg.problems}`,
+        description: `Total Problems Solved: ${variables.gfg.problemsCount}`,
         value: "@jhasuraj"
     }
 ]

@@ -1,6 +1,7 @@
 {
   "name": "jhasuraj01.github.io",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
@@ -23,6 +24,7 @@
     "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "update-data": "cd ./update && npm run fetch && cd ../",
     "deploy": "npx gh-pages -d build"
   },
   "eslintConfig": {
