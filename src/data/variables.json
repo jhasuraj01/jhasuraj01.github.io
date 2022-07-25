@@ -1,18 +1,28 @@
 {
     "leetcode": {
+        "profileLink": "https://leetcode.jhasuraj.com/",
         "problemsCount": 182
     },
     "gfg": {
+        "profileLink": "https://geeksforgeeks.jhasuraj.com/",
         "problemsCount": 66
     },
     "codechef": {
+        "profileLink": "https://codechef.jhasuraj.com/",
         "maxRating": 1938,
         "problemsCount": 177,
         "stars": "4★"
     },
     "codeforces": {
+        "profileLink": "https://codeforces.jhasuraj.com/",
         "maxRating": 1275,
         "problemsCount": 35,
         "rank": "pupil"
+    },
+    "interviewbit": {
+        "profileLink": "https://interviewbit.jhasuraj.com/"
+    },
+    "hackerearth": {
+        "profileLink": "https://hackerearth.jhasuraj.com/"
     }
 }

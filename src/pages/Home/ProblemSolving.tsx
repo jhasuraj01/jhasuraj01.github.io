@@ -36,10 +36,11 @@ const StatsContainer = styled.div`
     max-width: 700px;
     margin: auto;
 `
-const ProblemStats = styled.div`
+const ProblemStats = styled.a`
     display: flex;
     align-items: center;
     gap: 24px;
+    cursor: pointer;
     @media (max-width: 650px) {
         flex-direction: column;
         align-items: stretch;
@@ -81,7 +82,7 @@ export const ProblemSolving = () => {
                 </StatsDescription>
                 {ratings.map(rating => {
                     return (
-                        <ProblemStats key={rating.platform}>
+                        <ProblemStats key={rating.platform} href={rating.profileLink} rel="noopener noreferrer" target="_blank">
                             <StatsText>
                                 <PlatformName>{rating.platform}</PlatformName>
                                 <ProblemsCount>{rating.problemsCount}</ProblemsCount>
