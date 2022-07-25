@@ -113,7 +113,7 @@ const positions: PositionProps[] = [
         company: 'CodeChef',
         role: 'Educator',
         description: [
-            'Created 50+ video editorials for problems appeared in CodeChef’s competitive programming contests.',
+            'Created 70+ video editorials for problems appeared in CodeChef’s competitive programming contests.',
         ],
         location: 'Bangalore, Karnataka, India',
     },
