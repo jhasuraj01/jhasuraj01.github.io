@@ -46,7 +46,7 @@ export interface SocialLinkProps {
 
 export const SocialLink = ({ link, title, value, icon: Icon }: SocialLinkProps) => {
     return (
-        <Wrapper href={link} target="new" rel="noopener noreferrer">
+        <Wrapper href={link} target="_blank" rel="noopener noreferrer">
             <IconContainer>
                 <Icon />
             </IconContainer>

@@ -44,7 +44,7 @@ export interface ProfileLinkProps {
 
 export const ProfileLink = ({ link, title, subtitle, description, value }: ProfileLinkProps) => {
     return (
-        <Wrapper href={link} target="new" rel="noopener noreferrer">
+        <Wrapper href={link} target="_blank" rel="noopener noreferrer">
             <ProfileTitle>{title}</ProfileTitle>
             <ProfileSubTitle>{subtitle}</ProfileSubTitle>
             <ProfileDescription>{description}</ProfileDescription>
