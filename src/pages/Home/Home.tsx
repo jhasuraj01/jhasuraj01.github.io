@@ -1,11 +1,9 @@
 // import { AnimatingSentences } from "../components/animating-sentences/AnimatingSentences";
-import { useWindowSize } from "react-use";
 import styled from "styled-components";
 import { RollingText } from "../../components/rolling-text/RollingText";
 import { SocialConnect } from "../Links/SocialConnect";
 import { Experience } from "./Experience";
 import { HomeHeader } from "./HomeHeader";
-import { HomeHighlights } from "./HomeHighlights";
 import { LatestProjects } from "./LatestProjects";
 import { ProblemSolving } from "./ProblemSolving";
 // import { SkillGraph } from "./SkillGraph";
@@ -16,24 +14,20 @@ const ilike = [
     "I like Music!",
 ]
 
-const PageSection = styled.div<{width: number}>`
-    position: relative;
-    top: ${({ width }) => width > 1000 ? -220 : Math.min(-220 + 1000 - width, 0)}px;
-
-    @media screen and (max-width: 1000) {
-        top: 0px;
-    }
+const LikesContainer = styled.div`
+    display: flex;
+    padding: 100px 0;
+    justify-content: center;
+    align-content: center;
 `
 
 const Home = () => {
-    const { width } = useWindowSize()
     return (
         <>
         <HomeHeader />
-        <PageSection width={width}>
-            <HomeHighlights />
+        <LikesContainer>
             <RollingText sentences={ilike}/>
-        </PageSection>
+        </LikesContainer>
         <LatestProjects />
         <Experience />
         <ProblemSolving />

@@ -1,9 +1,10 @@
 .text {
+    display: inline-block;
     font-size: 48px;
     font-weight: 200;
     letter-spacing: 0;
     text-align: center;
-    margin: 28px 0;
+    // margin: 28px 0;
     animation: roll-up 1.5s ease-in-out forwards;
 
     @media (max-width: 600px){

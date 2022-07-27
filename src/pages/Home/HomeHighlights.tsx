@@ -4,48 +4,24 @@ import { Highlight } from "../../components/highlight/Highlight";
 import totalProblems from "./utils/totalProblems";
 
 const Wrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin: 0 64px;
-    @media (max-width: 600px) {
-        margin: 0 24px;
-    }
-`
-
-const HighlightsLeft = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 56px;
-
-    @media (max-width: 600px) {
-        gap: 36px;
-    }
-`
-
-const HighlightsRight = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 56px;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
     
-    @media (max-width: 600px) {
-        gap: 36px;
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
 `
 
 export const HomeHighlights = () => {
     return (
         <Wrapper>
-            <HighlightsLeft>
-                <Highlight text="Internships" data="+2" />
-                <Highlight text="Certifications" data="+8" />
-                <Highlight text="Research Papers" data="+2" />
-            </HighlightsLeft>
-            <HighlightsRight>
-                <Highlight text="Games Developed" data="+2" align="right" />
-                <Highlight text="DSA Problems Solved" data={`+${totalProblems()}`} align="right" />
-                <Link to="/projects"><Highlight text="Projects" data="+10" align="right" /></Link>
-            </HighlightsRight>
+            <Highlight title="Internships" data="+2" />
+            <Highlight title="DSA Problems Solved" data={`+${totalProblems()}`} />
+            <Link to="/projects"><Highlight title="Projects" data="+10" /></Link>
+            <Highlight title="Research Papers" data="+2" />
+            <Highlight title="Certifications" data="+8" />
+            <Highlight title="Games Developed" data="+2" />
         </Wrapper>
     );
 }

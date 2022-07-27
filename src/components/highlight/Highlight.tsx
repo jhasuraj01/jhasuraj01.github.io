@@ -1,52 +1,40 @@
 import styled from "styled-components"
 
-interface ContainerProps {
-    align: 'right' | 'left'
-}
-
 interface HighlightProps {
-    text: string
+    title: string
     data: string
-    align?: 'right' | 'left'
 }
 
-
-const Container = styled.div<ContainerProps>`
+const Container = styled.div`
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: ${props => props.align === 'right' ? 'flex-end' : 'flex-start'};
-    text-align: ${props => props.align};
+    align-items: center;
+    padding: 24px 32px;
     gap: 9px;
+    border: 2px solid var(--card-border-light);
+    border-radius: 16px;
 `
 
-const Text = styled.div`
-    font-size: 24px;
+const Title = styled.div`
+    font-size: 18px;
     font-weight: 400;
-    line-height: 27px;
-    letter-spacing: 0em;
-
     @media (max-width: 600px) {
         font-size: max(4vw, 16px);
     }
 `
 
 const Data = styled.div`
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 71px;
-    letter-spacing: 0em;
+    font-size: 40px;
     text-align: center;
-    
-    @media (max-width: 600px) {
-        font-size: max(10vw, 36px);
-    }
+    color: var(--color-theme);
 `
 
-export const Highlight = ({ text, data, align = 'left' }: HighlightProps) => {
+export const Highlight = ({ title, data }: HighlightProps) => {
     return (
-        <Container {...{ align }}>
-            <Text>{text}</Text>
+        <Container>
             <Data>{data}</Data>
+            <Title>{title}</Title>
         </Container>
     )
 }
