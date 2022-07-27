@@ -24,7 +24,7 @@ export const ratings = [
     {
         platform: "InterviewBit",
         problemsCount: 6,
-        profileLink: variables.interviewbit.profileLink
+        profileLink: variables.interviewbit.profileLink + "/solved-problems"
     },
     {
         platform: "HackerEarth",
