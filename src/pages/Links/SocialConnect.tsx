@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { SocialLink } from "../../components/social-link/SocialLink"
-import { ReactComponent as MailIcon } from "../../assets/contact-icons/mail.svg"
-import { ReactComponent as LinkedInIcon } from "../../assets/contact-icons/linkedin.svg"
-import { ReactComponent as GitHubIcon } from "../../assets/contact-icons/github.svg"
-import { ReactComponent as TwitterIcon } from "../../assets/contact-icons/twitter.svg"
+import { ReactComponent as MailIcon } from "../../assets/contact-icons-filled/mail.svg"
+import { ReactComponent as LinkedInIcon } from "../../assets/contact-icons-filled/linkedin.svg"
+import { ReactComponent as GitHubIcon } from "../../assets/contact-icons-filled/github.svg"
+import { ReactComponent as TwitterIcon } from "../../assets/contact-icons-filled/twitter.svg"
 
 const Wraper = styled(SectionWrapper)`
     box-sizing: border-box;
