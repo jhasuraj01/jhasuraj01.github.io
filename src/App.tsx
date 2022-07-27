@@ -16,15 +16,17 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path='/' element={<Suspense fallback={<Loader/>}><Home /></Suspense>} />
-        <Route path='/gallery' element={<Suspense fallback={<Loader/>}><Gallery /></Suspense>} />
-        <Route path='/programming' element={<Suspense fallback={<Loader/>}><Programming /></Suspense>} />
-        <Route path='/projects' element={<Suspense fallback={<Loader/>}><Projects /></Suspense>} />
-        <Route path='/links' element={<Suspense fallback={<Loader/>}><Links /></Suspense>} />
-        <Route path='*' element={<Suspense fallback={<Loader/>}><Page404 /></Suspense>} />
-      </Routes>
-      <Footer />
+      <Suspense fallback={<Loader/>}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/gallery' element={<Gallery />} />
+          <Route path='/programming' element={<Programming />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/links' element={<Links />} />
+          <Route path='*' element={<Page404 />} />
+        </Routes>
+        <Footer />
+      </Suspense>
     </>
   );
 }
