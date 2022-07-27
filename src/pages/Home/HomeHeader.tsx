@@ -3,6 +3,11 @@ import { RollingText } from "../../components/rolling-text/RollingText";
 import profileImage from '../../assets/profile2.jpg'
 import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { HomeHighlights } from "./HomeHighlights";
+import { ReactComponent as MailIcon } from "../../assets/contact-icons-outlined/mail.svg"
+import { ReactComponent as LinkedInIcon } from "../../assets/contact-icons-outlined/linkedin.svg"
+import { ReactComponent as GitHubIcon } from "../../assets/contact-icons-outlined/github.svg"
+import { ReactComponent as TwitterIcon } from "../../assets/contact-icons-outlined/twitter.svg"
+import { useWindowSize } from "react-use";
 
 const iam = [
     "Developer!",
@@ -85,19 +90,42 @@ const MySelf = styled.div`
     }
 `
 
+const SocialLinks = styled.div`
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding: 16px;
+    svg {
+        transition: all 250ms ease-in;
+        &:hover {
+            transition: all 250ms ease-out;
+            background-color: var(--color-theme_deep);
+            border-radius: 50%;
+        }
+    }
+`
+
 const Profile = styled.img`
     position: relative;
     float: right;
     left: -24px;
     top: -24px;
     width: 400px;
+    height: auto;
     max-width: 80vw;
 `
 
 export const HomeHeader = () => {
+    const { width } = useWindowSize()
     return (
         <Wrapper>
             <ImageContainer>
+                {width > 600 && <SocialLinks>
+                    <a href="mailto:contact@jhasuraj.com" target="_blank" rel="noopener noreferrer"><MailIcon /></a>
+                    <a href="https://linkedin.jhasuraj.com" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
+                    <a href="https://github.jhasuraj.com" target="_blank" rel="noopener noreferrer"><GitHubIcon /></a>
+                    <a href="https://twitter.jhasuraj.com" target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
+                </SocialLinks>}
                 <Profile loading="lazy" src={profileImage} alt="" width={413} height={550} />
             </ImageContainer>
             <InfoContainer>
