@@ -1,9 +1,12 @@
-import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { ProgressBar } from "../../components/progress/ProgressBar";
 import styled from "styled-components";
 import { ratings } from "../../data/programming";
 import totalProblems from "./utils/totalProblems";
 import variables from "../../data/variables.json"
+
+const Wrapper = styled.section`
+    background-color: var(--background-theme);
+`
 
 const SectionTitle = styled.div`
     padding: 72px 0;
@@ -74,7 +77,7 @@ export const ProblemSolving = () => {
     const maxCount = ratings[0].problemsCount * 1.1;
 
     return (
-        <SectionWrapper themeBg={true}>
+        <Wrapper>
             <SectionTitle>Problem Solving</SectionTitle>
             <StatsContainer>
                 <StatsDescription>
@@ -94,6 +97,6 @@ export const ProblemSolving = () => {
             </StatsContainer>
             <SectionHighlight>{variables.codechef.stars} on CodeChef</SectionHighlight>
             
-        </SectionWrapper>
+        </Wrapper>
     )
 }

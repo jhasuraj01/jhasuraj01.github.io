@@ -1,10 +1,13 @@
 import styled from "styled-components";
 import { ProjectCard, ProjectCardProps } from "../../components/project-card/ProjectCard";
-import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { ReactComponent as SpecialViewProjectIcon } from '../../assets/special-view-project.svg'
 import { Link } from "react-router-dom";
 import { useWindowSize } from "react-use";
 import { projects } from "../../data/projects";
+
+const Wrapper = styled.section`
+    background-color: var(--background-theme);
+`
 
 const SectionTitle = styled.div`
 
@@ -89,7 +92,7 @@ export const LatestProjects = () => {
     }
 
     return (
-        <SectionWrapper themeBg={true}>
+        <Wrapper>
             <SectionTitle>Latest Projects</SectionTitle>
             <Projects>
                 { projectGrid.map(projects => <ProjectRow key={projects[0].title} projects={projects} />) }
@@ -97,6 +100,6 @@ export const LatestProjects = () => {
             <AllProjectsLink to="projects">
                 <SpecialViewProjectIcon />
             </AllProjectsLink>
-        </SectionWrapper>
+        </Wrapper>
     )
 }

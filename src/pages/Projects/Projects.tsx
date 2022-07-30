@@ -3,7 +3,6 @@ import { RollingText } from "../../components/rolling-text/RollingText";
 import { projects } from "../../data/projects";
 import { ProjectCard } from "../../components/project-card/ProjectCard";
 import { SocialConnect } from "../Links/SocialConnect";
-import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 
 const domain = [
     "Frontend Web",
@@ -29,7 +28,7 @@ const ProjectHeader = styled.div`
     margin: 132px auto;
 `
 
-const ProjectsContainer = styled(SectionWrapper)`
+const ProjectsContainer = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -48,7 +47,7 @@ const Projects = () => {
             <SubTitle>Created 10+ Projects in various domain</SubTitle>
             <RollingText sentences={domain} />
         </ProjectHeader>
-        <ProjectsContainer themeBg={true}>
+        <ProjectsContainer>
             { projects.map(project => <ProjectCard {...project} /> )}
         </ProjectsContainer>
         <SocialConnect />

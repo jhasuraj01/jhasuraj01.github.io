@@ -1,6 +1,5 @@
 import { useWindowSize } from "react-use";
 import styled from "styled-components";
-import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 
 const Container = styled.div<{windowWidth: number}>`
     display: flex;
@@ -142,7 +141,7 @@ const positions: PositionProps[] = [
 export const Experience = () => {
     const { width } = useWindowSize();
     return (
-        <SectionWrapper>
+        <section>
             <Container windowWidth={width}>
                 <TitleContainer>
                     <SectionTitle windowWidth={width}>Experience</SectionTitle>
@@ -151,6 +150,6 @@ export const Experience = () => {
                     {positions.map(position => <Position key={position.company} {...position} />)}
                 </ExperienceContainer>
             </Container>
-        </SectionWrapper>
+        </section>
     )
 }

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { RollingText } from "../../components/rolling-text/RollingText";
 import profileImage from '../../assets/profile2.jpg'
-import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { HomeHighlights } from "./HomeHighlights";
 import { ReactComponent as MailIcon } from "../../assets/contact-icons-outlined/mail.svg"
 import { ReactComponent as LinkedInIcon } from "../../assets/contact-icons-outlined/linkedin.svg"
@@ -17,7 +16,7 @@ const iam = [
     "Student!"
 ]
 
-const Wrapper = styled(SectionWrapper)`
+const Wrapper = styled.section`
     display: flex;
     align-items: flex-start;
 

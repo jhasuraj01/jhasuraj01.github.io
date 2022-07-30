@@ -1,17 +1,17 @@
 import styled from "styled-components";
-import { SectionWrapper } from "../../components/section-wrapper/SectionWrapper";
 import { SocialLink } from "../../components/social-link/SocialLink"
 import { ReactComponent as MailIcon } from "../../assets/contact-icons-filled/mail.svg"
 import { ReactComponent as LinkedInIcon } from "../../assets/contact-icons-filled/linkedin.svg"
 import { ReactComponent as GitHubIcon } from "../../assets/contact-icons-filled/github.svg"
 import { ReactComponent as TwitterIcon } from "../../assets/contact-icons-filled/twitter.svg"
 
-const Wraper = styled(SectionWrapper)`
+const Wraper = styled.div`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 128px;
     padding: 128px 64px;
+    background-color: var(--background-theme);
     
     @media (max-width: 600px) {
         padding: 128px 0;
