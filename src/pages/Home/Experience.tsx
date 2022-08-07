@@ -1,155 +1,132 @@
-import { useWindowSize } from "react-use";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Container = styled.div<{windowWidth: number}>`
-    display: flex;
-    flex-direction: ${({ windowWidth }) => windowWidth < 1000 ? 'column' : 'row' };
-    gap: ${({ windowWidth }) => windowWidth < 1000 ? 0 : '64px' };
-    padding: ${({ windowWidth }) => windowWidth < 1000 ? '64px 0' : '0 64px' };
+const Wrapper = styled.section`
+    background-color: var(--background-theme);
 `
-const TitleContainer = styled.div`
-    overflow: hidden;
-    @media (min-width: 1000px) {
-        height: 100vh;
-        flex: 0 0 120px;
-        position: sticky;
-        top: 0;
-    }
-`
-const SectionTitle = styled.div<{windowWidth: number}>`
-    display: inline-block;
+const SectionTitle = styled.div`
+    padding: 72px 0;
     font-weight: 700;
-    font-size: 12vw;
-    padding: 0 16px;
+    font-size: 64px;
+    text-align: center;
 
-    @media (min-width: 1000px) {
-        padding: 0;
-        font-weight: 700;
-        font-size: min(15vh, 128px);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate3d(-50%,-50%,0) rotate(-90deg);
-        transform-origin: 50% 50%;
+    @media (max-width: 650px) {
+        font-size: max(10vw, 32px);
+        padding: max(10vw, 32px) 0;
     }
 `
-const ExperienceContainer = styled.div`
-    padding: 64px 0;
-    min-height: 100%;
-    flex-grow: 1;
-`
 
-const PositionContainer = styled.div`
+const Positions = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 0;
-    border-top: 2px solid var(--card-border);
-    padding: 16px 32px;
-
-    @media (min-width: 1000px) {
-        flex-direction: row;
-        gap: 24px;
-    }
-`
-const WorkDate = styled.div`
-    margin: 12px 2px;
-    @media (min-width: 1000px) {
-        margin: 0;
-        flex: 0 0 160px;
-    }
-`
-const WorkDetails = styled.div`
-    flex-grow: 1;
+    align-items: center;
+    gap: 48px;
+    padding: 48px;
+    padding-top: 0;
+`;
+const CompanyCardWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 0px;
-    gap: 12px;
-`
-const WorkCompany = styled.div`
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
-`
-const WorkRole = styled.div`
-    font-style: normal;
-    font-weight: 400;
+    padding: 32px;
+    gap: 16px;
+    max-width: 1000px;
+    background-color: var(--color-theme_deep);
+    border-bottom: 2px solid #8D33FF;
+    border-radius: 8px;
+`;
+const DateLocation = styled.div`
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+`;
+const CompanyRole = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+`;
+const CompanyName = styled.div`
     font-size: 24px;
-    line-height: 27px;
-`
-const WorkLocation = styled.div`
+`;
+const RoleName = styled.div`
+    font-size: 20px;
+`;
+const Description = styled.div`
+    font-size: 16px;
+`;
+const Skills = styled.div`
+    font-size: 14px;
+`;
+const LearnMore = styled(Link)`
+    align-self: flex-end;
+    font-size: 16px;
     text-align: right;
-`
+    color: var(--color-theme);
+`;
 
-export interface PositionProps {
-    date: string
+export interface CompanyCardProps {
+    duration: string
     company: string
     role: string
-    description: string[]
+    description: string
     location: string
+    link?: string
+    skills: string
 }
 
-const Position = ({ date, company, role, description, location }: PositionProps) => {
+const CompanyCard = ({ duration, company, role, description, location, link, skills }: CompanyCardProps) => {
     return (
-        <PositionContainer>
-            <WorkDate>{date}</WorkDate>
-            <WorkDetails>
-                <WorkCompany>{company}</WorkCompany>
-                <WorkRole>{role}</WorkRole>
-                <ul>
-                    {description.map(point => <li key={point}>{point}</li>)}
-                </ul>
-                <WorkLocation>{location}</WorkLocation>
-            </WorkDetails>
-        </PositionContainer>
+        <CompanyCardWrapper>
+            <DateLocation>
+                <span>{duration}</span>
+                <span>{location}</span>
+            </DateLocation>
+            <CompanyRole>
+                <CompanyName>{company}</CompanyName>
+                <RoleName>{role}</RoleName>
+            </CompanyRole>
+            <Description>{description}</Description>
+            <Skills><b>Skills:</b> {skills} </Skills>
+            {link && <LearnMore to={link}>Learn More</LearnMore>}
+        </CompanyCardWrapper>
     )
 }
 
-const positions: PositionProps[] = [
+const positions: CompanyCardProps[] = [
     {
-        date: '01/22 - present',
+        duration: '01/22 - present',
         company: 'CodeChef',
         role: 'Educator',
-        description: [
-            'Created 70+ video editorials for problems appeared in CodeChef’s competitive programming contests.',
-        ],
+        description: `I am working as an educator at CodeChef. My job in this role is to solve competitive programming problems and create video editorials to help beginners learn and understand basic math, data structures, and algorithms to develop problem-solving skills. I have helped thousands of participants by creating over 80+ video editorials for problems with difficulty up to "CodeChef Easy".`,
         location: 'Bangalore, Karnataka, India',
+        skills: "Problem Solving, Communication, Teaching, Competitive Programming, Data Structures, Algorithms",
     },
     {
-        date: '02/22 - 04/22',
-        company: 'Cloudbloq (CloudRocks pvt. ltd.)',
+        duration: '02/22 - 04/22',
+        company: 'CloudRocks pvt. ltd. (Cloudbloq)',
         role: 'Software Engineer Intern',
-        description: [
-            'Enhanced User Authentication Flow, Implemented Analytic Viewer',
-            'Worked on various bugs in many business critical features. Primary used NodeJs, ReactJs, SCSS, Redux-Saga.',
-        ],
+        description: `During this internship, I worked with modern technologies like ReactJs & NodeJs. Majorly I had Enhanced User Authentication Flow and Implemented Analytic Viewer. I worked closely with senior developers and my mentor at CloudBloq to implement new features and fixed various bugs in the frontend and backend.`,
         location: 'Bangalore, Karnataka, India',
+        skills: "Node.js, React.js, SCSS, React-Saga",
     },
     {
-        date: '06/21 - 12/21',
+        duration: '06/21 - 12/21',
         company: 'MythView',
         role: 'Freelance Backend Engineer',
-        description: [
-            'Implemented User Authentication System, Multi-Account (Personal & Community), Likes and infinitely nested comment on users post, News-Feed generation from followed accounts.',
-            'Primarily used NodeJS, ExpressJS, Cloud Firestore, GraphQL, Cloud Storage, Stoplight Studio',
-        ],
+        description: `Implemented User Authentication System, Multi-Account (Personal & Community), Likes and infinitely nested comment on users post, News-Feed generation from followed accounts.`,
         location: 'Mumbai, Maharashtra, India',
+        skills: "Node.js, Express.js, Cloud Firestore, GraphQL, Cloud Storage, Stoplight Studio",
     },
 ]
 
 export const Experience = () => {
-    const { width } = useWindowSize();
     return (
-        <section>
-            <Container windowWidth={width}>
-                <TitleContainer>
-                    <SectionTitle windowWidth={width}>Experience</SectionTitle>
-                </TitleContainer>
-                <ExperienceContainer>
-                    {positions.map(position => <Position key={position.company} {...position} />)}
-                </ExperienceContainer>
-            </Container>
-        </section>
+        <Wrapper>
+            <SectionTitle>Experience</SectionTitle>
+            <Positions>
+                {positions.map(position => <CompanyCard key={position.company} {...position} />)}
+            </Positions>
+        </Wrapper>
     )
 }

@@ -26,8 +26,8 @@ const Home = () => {
             <LikesContainer>
                 <RollingText sentences={ilike}/>
             </LikesContainer>
-            <LatestProjects />
             <Experience />
+            <LatestProjects />
             <ProblemSolving />
             <Skills />
             <SocialConnect />
