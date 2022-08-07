@@ -23,6 +23,12 @@ const Positions = styled.div`
     gap: 48px;
     padding: 48px;
     padding-top: 0;
+
+    @media (max-width: 500px) {
+        padding: 16px;
+        padding-top: 0;
+    }
+
 `;
 const CompanyCardWrapper = styled.div`
     display: flex;
