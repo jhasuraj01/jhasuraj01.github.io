@@ -41,6 +41,16 @@ export const projects: ProjectCardProps[] = [
         tags: ["firestore", "firebase auth"]
     },
     {
+        title: "CRA Template - Redux Typescript Router",
+        subtitle: "Open Source / Front End",
+        links: {
+            project: "https://www.npmjs.com/package/cra-template-redux-typescript-router",
+            github: "https://github.com/jhasuraj01/cra-template-redux-typescript-router"
+        },
+        thumbnail: "https://miro.medium.com/max/696/0*-hl5tR5sBHW-ME7d",
+        tags: ["typescript", "react", "router"]
+    },
+    {
         title: "Randomized Video Feedback Collection",
         subtitle: "Data Analysis / DBMS",
         links: {
