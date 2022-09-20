@@ -1,7 +1,7 @@
 {
     "leetcode": {
         "profileLink": "https://leetcode.jhasuraj.com",
-        "problemsCount": 258
+        "problemsCount": 260
     },
     "gfg": {
         "profileLink": "https://geeksforgeeks.jhasuraj.com",
@@ -16,7 +16,7 @@
     "codeforces": {
         "profileLink": "https://codeforces.jhasuraj.com",
         "maxRating": 1275,
-        "problemsCount": 57,
+        "problemsCount": 59,
         "rank": "pupil"
     },
     "interviewbit": {
