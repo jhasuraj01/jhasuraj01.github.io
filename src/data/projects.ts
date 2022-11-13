@@ -2,6 +2,15 @@ import { ProjectCardProps } from "../components/project-card/ProjectCard";
 
 export const projects: ProjectCardProps[] = [
     {
+        title: "Certifier Dapp - BlockChain",
+        subtitle: "Web3 / Ethereum / Dapp",
+        links: {
+            github: 'https://github.com/aachal01/certifier-dapp'
+        },
+        thumbnail: "https://miro.medium.com/max/1400/0*M-p2nZwJZYzwnDBc.png",
+        tags: ["truffle", "solidity", "react"]
+    },
+    {
         title: "Anorcle Notes - Cloud Project",
         subtitle: "Full Stack / Serverless / DBMS",
         links: {
