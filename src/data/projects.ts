@@ -11,6 +11,16 @@ export const projects: ProjectCardProps[] = [
         tags: ["truffle", "solidity", "react"]
     },
     {
+        title: "Medistore - Inventory",
+        subtitle: "Full Stack / GCP / DBMS",
+        links: {
+            github: 'https://github.com/jhasuraj01/medistore',
+            project: 'https://medistore.jhasuraj.com/',
+        },
+        thumbnail: "https://www.sosinventory.com/wp-content/uploads/2020/10/warehouse-management-software.png",
+        tags: ["graphql", "firestore", "react"]
+    },
+    {
         title: "Anorcle Notes - Cloud Project",
         subtitle: "Full Stack / Serverless / DBMS",
         links: {
@@ -18,16 +28,6 @@ export const projects: ProjectCardProps[] = [
         },
         thumbnail: "https://clickup.com/blog/wp-content/uploads/2020/01/note-taking.png",
         tags: ["dynamodb", "s3", "lit"]
-    },
-    {
-        title: "Online Sudoku Web Game",
-        subtitle: "Web Frontend / DSA / Game",
-        links: {
-            project: "https://jhasuraj.com/sudoku/",
-            github: "https://github.com/jhasuraj01/sudoku"
-        },
-        thumbnail: "https://t4.ftcdn.net/jpg/00/01/31/81/360_F_1318176_WoOuwog3nfY4wpCiaxLqjbzrEk7MNt.jpg",
-        tags: ["react", "typescript", "redux"]
     },
     {
         title: "DSA - NPM Package (Ts/Js)",
@@ -38,6 +38,16 @@ export const projects: ProjectCardProps[] = [
         },
         thumbnail: "https://images-na.ssl-images-amazon.com/images/I/51Nv6BP9YSL.jpg",
         tags: ["typescript", "jest", "typedoc"]
+    },
+    {
+        title: "Online Sudoku Web Game",
+        subtitle: "Web Frontend / DSA / Game",
+        links: {
+            project: "https://jhasuraj.com/sudoku/",
+            github: "https://github.com/jhasuraj01/sudoku"
+        },
+        thumbnail: "https://t4.ftcdn.net/jpg/00/01/31/81/360_F_1318176_WoOuwog3nfY4wpCiaxLqjbzrEk7MNt.jpg",
+        tags: ["react", "typescript", "redux"]
     },
     {
         title: "College Event Certification",
