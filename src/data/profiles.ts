@@ -27,7 +27,7 @@ export const profiles: ProfileLinkProps[] = [
         link: "https://github.jhasuraj.com",
         title: "GitHub",
         subtitle: "Software Project Management",
-        description: "Stars: 80, Public Repo: 49",
+        description: "Stars: 85, Public Repo: 53",
         value: "@jhasuraj01"
     },
     {
