@@ -7,11 +7,12 @@ export const Header = () => {
         <header className={styles.header}>
             <NavLink to="/" className={styles.title}>suraj.</NavLink>
             <div className={styles.nav}>
-                <NavItem link='/' text='home' />
+                <NavItem to='/' text='home' />
                 {/* <NavItem link='/gallery' text='gallery' /> */}
                 {/* <NavItem link='/programming' text='programming' /> */}
-                <NavItem link='/projects' text='projects' />
-                <NavItem link='/links' text='links' />
+                <NavItem to='//jhasuraj.com/blog' text='blog' target={'_blank'} />
+                <NavItem to='/projects' text='projects' />
+                <NavItem to='/links' text='links' />
             </div>
         </header>
     );

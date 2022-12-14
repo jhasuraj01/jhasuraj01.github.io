@@ -1,12 +1,12 @@
 import styles from './NavItem.module.scss';
-import { NavLink } from "react-router-dom";
+import { NavLink, NavLinkProps } from "react-router-dom";
 
-interface NavItemProps {
+interface NavItemProps extends NavLinkProps {
     text: string
-    link: string
+    to: string
 }
 
-export const NavItem = ({ text, link}: NavItemProps) => {
+export const NavItem = (props : NavItemProps) => {
 
     const className = ({ isActive }: { isActive: boolean}): string => {
         const classes = [styles.container]
@@ -17,8 +17,8 @@ export const NavItem = ({ text, link}: NavItemProps) => {
     }
 
     return (
-        <NavLink to={link} className={className}>
-            <div>{text}</div>
+        <NavLink {...props} className={className}>
+            <div>{props.text}</div>
             <div className={styles.bar} />
         </NavLink>
     );
