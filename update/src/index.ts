@@ -11,8 +11,8 @@ const __dirname = new URL('.', import.meta.url).pathname;
     const dataPath = path.resolve(__dirname + "../../src/data/variables.json")
     const variables = JSON.parse(await readFile(dataPath, 'utf-8'))
 
-    const codechef = await fetchCodeChef();
-    variables.codechef = { ...variables.codechef, ...codechef};
+    // const codechef = await fetchCodeChef();
+    // variables.codechef = { ...variables.codechef, ...codechef};
 
     const codeforces = await fetchCodeForces();
     variables.codeforces = { ...variables.codeforces, ...codeforces};
@@ -21,4 +21,5 @@ const __dirname = new URL('.', import.meta.url).pathname;
     variables.leetcode = { ...variables.leetcode, ...leetcode};
 
     writeFile(dataPath, JSON.stringify(variables, null, 4));
+
 })()
