@@ -92,7 +92,7 @@ export const projects: ProjectCardProps[] = [
         title: "Document Change Tracker - DocFlow",
         subtitle: "Front End / DSA",
         links: {
-            project: "https://docflow.vercel.app/",
+            project: "https://jhasuraj.com/docflow/",
             github: "https://github.com/jhasuraj01/docflow"
         },
         thumbnail: "https://www.docscorp.com/globalassets/aaimages/hero-images/blog/blg-hd-cd-beyond-redline.jpg",
