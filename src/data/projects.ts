@@ -21,13 +21,14 @@ export const projects: ProjectCardProps[] = [
         tags: ["graphql", "firestore", "react"]
     },
     {
-        title: "Anorcle Notes - Cloud Project",
-        subtitle: "Full Stack / Serverless / DBMS",
+        title: "React Notepad - Clean Architecture",
+        subtitle: "Web Frontend / Browser API",
         links: {
-            project: "https://notes.anorcle.com/",
+            project: "https://jhasuraj.com/notepad/",
+            github: "https://github.com/jhasuraj01/notepad"
         },
-        thumbnail: "https://clickup.com/blog/wp-content/uploads/2020/01/note-taking.png",
-        tags: ["dynamodb", "s3", "lit"]
+        thumbnail: "https://as1.ftcdn.net/v2/jpg/01/83/63/40/1000_F_183634000_JYxLy40QgF19lhNoKGHlLDp8yByAkrXt.jpg",
+        tags: ["clean", "architecture", "typescript"]
     },
     {
         title: "DSA - NPM Package (Ts/Js)",
@@ -38,6 +39,15 @@ export const projects: ProjectCardProps[] = [
         },
         thumbnail: "https://images-na.ssl-images-amazon.com/images/I/51Nv6BP9YSL.jpg",
         tags: ["typescript", "jest", "typedoc"]
+    },
+    {
+        title: "Anorcle Notes - Cloud Project",
+        subtitle: "Full Stack / Serverless / DBMS",
+        links: {
+            project: "https://notes.anorcle.com/",
+        },
+        thumbnail: "https://clickup.com/blog/wp-content/uploads/2020/01/note-taking.png",
+        tags: ["dynamodb", "s3", "lit"]
     },
     {
         title: "Online Sudoku Web Game",
@@ -117,15 +127,5 @@ export const projects: ProjectCardProps[] = [
         },
         thumbnail: "https://cdn.wethegeek.com/wp-content/uploads/2021/08/Best-Password-Generator-Apps-For-Android.jpg",
         tags: ["javascript", "scss"]
-    },
-    {
-        title: "Notepad Web App - Text Editor",
-        subtitle: "Web Frontend / Browser API",
-        links: {
-            project: "https://jhasuraj.com/notepad/",
-            github: "https://github.com/jhasuraj01/notepad"
-        },
-        thumbnail: "https://as1.ftcdn.net/v2/jpg/01/83/63/40/1000_F_183634000_JYxLy40QgF19lhNoKGHlLDp8yByAkrXt.jpg",
-        tags: ["webpack", "javascript", "scss"]
     },
 ]
