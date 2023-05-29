@@ -11,6 +11,16 @@ export const projects: ProjectCardProps[] = [
         tags: ["truffle", "solidity", "react"]
     },
     {
+        title: "FilePad: File Explorer & Editor",
+        subtitle: "Web Frontend / Clean Architecture / PWA",
+        links: {
+            project: "https://jhasuraj.com/filepad/",
+            github: "https://github.com/jhasuraj01/filepad",
+        },
+        thumbnail: "https://user-images.githubusercontent.com/44930179/239702956-c18f625e-5c26-496e-b7fa-5615d79ac96e.png",
+        tags: ["typescript", "react", "dsa"]
+    },
+    {
         title: "Medistore - Inventory",
         subtitle: "Full Stack / GCP / DBMS",
         links: {
@@ -21,15 +31,6 @@ export const projects: ProjectCardProps[] = [
         tags: ["graphql", "firestore", "react"]
     },
     {
-        title: "Anorcle Notes - Cloud Project",
-        subtitle: "Full Stack / Serverless / DBMS",
-        links: {
-            project: "https://notes.anorcle.com/",
-        },
-        thumbnail: "https://clickup.com/blog/wp-content/uploads/2020/01/note-taking.png",
-        tags: ["dynamodb", "s3", "lit"]
-    },
-    {
         title: "DSA - NPM Package (Ts/Js)",
         subtitle: "Open Source / DSA / OOP",
         links: {
@@ -38,6 +39,15 @@ export const projects: ProjectCardProps[] = [
         },
         thumbnail: "https://images-na.ssl-images-amazon.com/images/I/51Nv6BP9YSL.jpg",
         tags: ["typescript", "jest", "typedoc"]
+    },
+    {
+        title: "Anorcle Notes - Cloud Project",
+        subtitle: "Full Stack / Serverless / DBMS",
+        links: {
+            project: "https://notes.anorcle.com/",
+        },
+        thumbnail: "https://clickup.com/blog/wp-content/uploads/2020/01/note-taking.png",
+        tags: ["dynamodb", "s3", "lit"]
     },
     {
         title: "Online Sudoku Web Game",
