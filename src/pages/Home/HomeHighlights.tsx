@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 export const HomeHighlights = () => {
     return (
         <Wrapper>
-            <Highlight title="Internships" data="2" />
+            <Highlight title="Internships" data="3" />
             <Highlight title="DSA Problems Solved" data={`+${totalProblems()}`} />
             <Link to="/projects"><Highlight title="Projects" data="+10" /></Link>
             <Highlight title="Research Papers" data="2" />

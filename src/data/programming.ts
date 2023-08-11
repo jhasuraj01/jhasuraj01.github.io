@@ -1,6 +1,12 @@
 import variables from './variables.json';
 
-export const ratings = [
+export interface IRating {
+    platform: string,
+    problemsCount: number,
+    profileLink?: string
+}
+
+export const ratings: IRating[] = [
     {
         platform: "LeetCode",
         problemsCount: variables.leetcode.problemsCount,

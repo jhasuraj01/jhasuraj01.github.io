@@ -135,7 +135,7 @@ export const HomeHeader = () => {
                     <span> and Engineering with Honors in </span>
                     <strong>Blockchain</strong>
                     <span> Technology at Pimpri Chinchwad College of Engineering, Pune. My current CGPA is </span>
-                    <strong>9.42/10</strong>
+                    <strong>9.15/10</strong>
                     <span> and I will graduate in </span>
                     <strong>June 2024</strong>
                     <span>. I am a technology enthusiast and passionate about programming, design, and art. I love to explore and generally feel excited to learn new things about anything, whether technology related or not.</span>

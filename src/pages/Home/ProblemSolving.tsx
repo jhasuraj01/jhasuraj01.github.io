@@ -72,9 +72,30 @@ const StatsDescription = styled.div`
 `
 
 export const ProblemSolving = () => {
-
     ratings.sort((a, b) => b.problemsCount - a.problemsCount);
     const maxCount = ratings[0].problemsCount * 1.1;
+
+    // remove small counts and display other instead
+    const modifiedRatings: typeof ratings = []
+    const totalProblemActualCount = ratings.reduce((currentTotal, b) => currentTotal + b.problemsCount, 0);
+    let currentProblemCount = 0;
+    let otherPlatformProblemsCount = 0;
+    for (let i = 0; i < ratings.length; i++) {
+        const platform = ratings[i];
+        if(currentProblemCount < totalProblemActualCount * 0.8) {
+            modifiedRatings.push(platform)
+        }
+        else {
+            otherPlatformProblemsCount += platform.problemsCount;
+        }
+        currentProblemCount += platform.problemsCount;
+    }
+    if(otherPlatformProblemsCount > 0) {
+        modifiedRatings.push({
+            platform: "Other Platforms",
+            problemsCount: otherPlatformProblemsCount,
+        })
+    }
 
     return (
         <Wrapper>
@@ -83,7 +104,7 @@ export const ProblemSolving = () => {
                 <StatsDescription>
                     <strong>{totalProblems()}+</strong> Quality Problems solved on Various Platforms
                 </StatsDescription>
-                {ratings.map(rating => {
+                {modifiedRatings.map(rating => {
                     return (
                         <ProblemStats key={rating.platform} href={rating.profileLink} rel="noopener noreferrer" target="_blank">
                             <StatsText>
