@@ -19,7 +19,7 @@ export const HomeHighlights = () => {
             <Highlight title="Internships" data="3" />
             <Highlight title="DSA Problems Solved" data={`+${totalProblems()}`} />
             <Link to="/projects"><Highlight title="Projects" data="+10" /></Link>
-            <Highlight title="Research Papers" data="2" />
+            <Highlight title="Research Papers" data="3" />
             <Highlight title="Certifications" data="+16" />
             <Highlight title="Games Developed" data="+2" />
         </Wrapper>
