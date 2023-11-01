@@ -18,6 +18,15 @@ export interface IExperience {
 
 export const experiences: IExperience[] = [
     {
+        duration: 'Aug 2023 - Present',
+        company: 'Cypherock',
+        role: 'Full Stack Developer Intern',
+        description: `Working with Cypherock X1 hardware wallet & adding new features in cySync Desktop App. Developed AI-powered automation tools for Lead Generation with 85% success rate.`,
+        location: 'Remote',
+        skills: "TypeScript, React.js, Node.js, Blockchain",
+        type: JobTypeEnum.INTERNSHIP,
+    },
+    {
         duration: 'Jun 2023 - Aug 2023',
         company: 'Barclays',
         role: 'Product Technology, Summer Intern',
