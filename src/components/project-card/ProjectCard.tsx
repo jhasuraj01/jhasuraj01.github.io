@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { ReactComponent as ArrowTopRight } from '../../assets/arrow-top-right.svg'
-import { ReactComponent as GitHubSmall } from '../../assets/github-small.svg'
-import { ReactComponent as VideoIcon } from '../../assets/video-icon.svg'
+import GitHubSmall from '../../assets/github-small.svg?react'
+import ArrowTopRight from '../../assets/arrow-top-right.svg?react'
+import VideoIcon from '../../assets/video-icon.svg?react'
 
 const Card = styled.a`
     display: flex;

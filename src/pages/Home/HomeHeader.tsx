@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { RollingText } from "../../components/rolling-text/RollingText";
 import profileImage from '../../assets/profile2.jpg'
 import { HomeHighlights } from "./HomeHighlights";
-import { ReactComponent as MailIcon } from "../../assets/contact-icons-outlined/mail.svg"
-import { ReactComponent as LinkedInIcon } from "../../assets/contact-icons-outlined/linkedin.svg"
-import { ReactComponent as GitHubIcon } from "../../assets/contact-icons-outlined/github.svg"
-import { ReactComponent as TwitterIcon } from "../../assets/contact-icons-outlined/twitter.svg"
+import MailIcon from "../../assets/contact-icons-outlined/mail.svg?react"
+import LinkedInIcon from "../../assets/contact-icons-outlined/linkedin.svg?react"
+import GitHubIcon from "../../assets/contact-icons-outlined/github.svg?react"
+import TwitterIcon from "../../assets/contact-icons-outlined/twitter.svg?react"
 import { useWindowSize } from "react-use";
 
 const iam = [

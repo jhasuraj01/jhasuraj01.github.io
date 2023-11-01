@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ProjectCard, ProjectCardProps } from "../../components/project-card/ProjectCard";
-import { ReactComponent as SpecialViewProjectIcon } from '../../assets/special-view-project.svg'
+import SpecialViewProjectIcon from '../../assets/special-view-project.svg?react'
 import { Link } from "react-router-dom";
 import { useWindowSize } from "react-use";
 import { projects } from "../../data/projects";

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { NavItem } from "../nav-item/NavItem";
-import styles from "./Header.module.scss"
+import styles from "./Header.module.scss";
 
 export const Header = () => {
     return (
