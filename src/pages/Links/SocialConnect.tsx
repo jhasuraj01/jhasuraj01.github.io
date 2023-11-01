@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { SocialLink } from "../../components/social-link/SocialLink"
-import { ReactComponent as MailIcon } from "../../assets/contact-icons-filled/mail.svg"
-import { ReactComponent as LinkedInIcon } from "../../assets/contact-icons-filled/linkedin.svg"
-import { ReactComponent as GitHubIcon } from "../../assets/contact-icons-filled/github.svg"
-import { ReactComponent as TwitterIcon } from "../../assets/contact-icons-filled/twitter.svg"
+import MailIcon from "../../assets/contact-icons-filled/mail.svg?react"
+import LinkedInIcon from "../../assets/contact-icons-filled/linkedin.svg?react"
+import GitHubIcon from "../../assets/contact-icons-filled/github.svg?react"
+import TwitterIcon from "../../assets/contact-icons-filled/twitter.svg?react"
 
 const Wraper = styled.div`
     box-sizing: border-box;
