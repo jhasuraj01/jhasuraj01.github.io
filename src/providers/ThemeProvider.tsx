@@ -1,4 +1,8 @@
-import { createContext, useContext, Context,  } from 'react';
+import { useContext,  } from 'react';
+import {
+    ThemeContext as StyledThemeContext,
+    ThemeProvider as StyledThemeProvider
+} from 'styled-components';
 
 export interface Theme {
     color: {
@@ -50,18 +54,18 @@ const lightTheme: Theme = {
     },
 };
 
-export const ThemeContext: Context<Theme> = createContext<Theme>(lightTheme);
-
 export interface ThemeProviderProps {
     children: React.ReactNode | React.ReactNode[]
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-    <ThemeContext.Provider value={lightTheme}>
-      {children}
-    </ThemeContext.Provider>
+    return (
+        <StyledThemeProvider theme={lightTheme}>
+          {children}
+        </StyledThemeProvider>
+    )
 }
 
 export function useTheme(): Theme {
-    return useContext(ThemeContext);
+    return useContext(StyledThemeContext);
 }

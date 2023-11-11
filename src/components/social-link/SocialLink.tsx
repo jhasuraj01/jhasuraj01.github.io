@@ -7,7 +7,7 @@ const Wrapper = styled.a`
     align-items: center;
     padding: 12px;
     gap: 16px;
-    border-top: 1px solid #9A4DFF;
+    border-top: 1px solid var(--card-border);
     transition: all 250ms ease-in-out;
 
     &:hover {

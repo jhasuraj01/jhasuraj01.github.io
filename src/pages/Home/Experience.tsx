@@ -39,7 +39,7 @@ const CompanyCardWrapper = styled.div`
     gap: 16px;
     max-width: 1000px;
     background-color: var(--color-theme_deep);
-    border-bottom: 2px solid #8D33FF;
+    border-bottom: 2px solid var(--color-theme);
     border-radius: 8px;
 `;
 const DateLocation = styled.div`
