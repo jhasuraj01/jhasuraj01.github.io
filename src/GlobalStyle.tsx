@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     --card-border-light: ${props => props.theme.border.themeSecondary};
     --background-theme: ${props => props.theme.background.themePrimary};
     --color-theme_deep: ${props => props.theme.color.themeSecondary};
-    --background-theme_deep: ${props => props.theme.border.themePrimary}; 
+    --background-theme_deep: ${props => props.theme.background.themeSecondary}; 
     --scrollbar-thumb: ${props => props.theme.scroll.thumb};
     --scrollbar-thumb_hover: ${props => props.theme.scroll.thumbHover};
   }

@@ -18,8 +18,6 @@ export interface Theme {
         themeSecondary: string
     }
     border: {
-        primary: string
-        secondary: string
         themePrimary: string
         themeSecondary: string
     }
@@ -43,10 +41,31 @@ const lightTheme: Theme = {
         themeSecondary: "#9A4DFF",
     },
     border: {
-        primary: "#303030",
-        secondary: "#5A5A5A",
         themePrimary: "#9A4DFF",
         themeSecondary: "#F1E6FF",
+    },
+    scroll: {
+        thumb: "#CCCCCC",
+        thumbHover: "#B3B3B3",
+    },
+};
+
+const darkTheme: Theme = {
+    color: {
+        primary: "#9e9e9e",
+        secondary: "#5A5A5A",
+        themePrimary: "#a866ff",
+        themeSecondary: "#4200a7",
+    },
+    background: {
+        primary: "#0e1011",
+        secondary: "#30007f",
+        themePrimary: "#15191a",
+        themeSecondary: "#080014",
+    },
+    border: {
+        themePrimary: "#9A4DFF",
+        themeSecondary: "#1a1a1a",
     },
     scroll: {
         thumb: "#CCCCCC",
