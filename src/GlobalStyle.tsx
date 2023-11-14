@@ -1,9 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  body {
-    background: ${props => props.theme.background.primary};
-    color: ${props => props.theme.color.primary};
+  html {
     --color: ${props => props.theme.color.primary};
     --color-secondary: ${props => props.theme.color.secondary};
     --color-theme: ${props => props.theme.color.themePrimary};
@@ -15,5 +13,9 @@ export const GlobalStyle = createGlobalStyle`
     --background-theme_deep: ${props => props.theme.background.themeSecondary}; 
     --scrollbar-thumb: ${props => props.theme.scroll.thumb};
     --scrollbar-thumb_hover: ${props => props.theme.scroll.thumbHover};
+  }
+  body {
+    background: ${props => props.theme.background.primary};
+    color: ${props => props.theme.color.primary};
   }
 `

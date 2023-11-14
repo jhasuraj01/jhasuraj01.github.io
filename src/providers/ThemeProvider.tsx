@@ -45,8 +45,8 @@ const lightTheme: Theme = {
         themeSecondary: "#F1E6FF",
     },
     scroll: {
-        thumb: "#CCCCCC",
-        thumbHover: "#B3B3B3",
+        thumb: "hsl(0, 0%, 70%)",
+        thumbHover: "hsl(0, 0%, 60%)",
     },
 };
 

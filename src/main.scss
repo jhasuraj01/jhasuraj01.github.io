@@ -1,9 +1,13 @@
+@use "sass:math";
+
 html {
   scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,28 +22,37 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-$scroll-bar-width: 12px;
+// should always be multiple of 2
+$scroll-bar-container-width: 16px;
+$scroll-bar-width-hover: 6px;
+$scroll-bar-width: 4px;
 
 @mixin scrollbar {
+  html {
+    scrollbar-gutter: stable both-edges;
+    background-color: var(--background-theme);
+  }
+
   body {
     overflow: auto;
-    overflow: overlay;
+    margin-top: $scroll-bar-container-width;
+    margin-bottom: $scroll-bar-container-width;
   }
 
   ::-webkit-scrollbar {
-    width: $scroll-bar-width;
-    height: $scroll-bar-width;
+    width: $scroll-bar-container-width;
+    // height: $scroll-bar-container-width;
   }
 
   ::-webkit-scrollbar-thumb {
-    border: 4px solid transparent;
+    border: math.div($scroll-bar-container-width - $scroll-bar-width, 2px) * 1px solid transparent;
     background-clip: padding-box;
     background-color: var(--scrollbar-thumb);
-    border-radius: $scroll-bar-width;
+    border-radius: $scroll-bar-container-width;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    border: 3px solid transparent;
+    border: math.div($scroll-bar-container-width - $scroll-bar-width-hover, 2px) * 1px solid transparent;
     background-color: var(--scrollbar-thumb_hover);
     cursor: pointer;
   }
