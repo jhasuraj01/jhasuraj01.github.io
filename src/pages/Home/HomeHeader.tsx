@@ -7,6 +7,9 @@ import LinkedInIcon from "../../assets/contact-icons-outlined/linkedin.svg?react
 import GitHubIcon from "../../assets/contact-icons-outlined/github.svg?react"
 import TwitterIcon from "../../assets/contact-icons-outlined/twitter.svg?react"
 import { useWindowSize } from "react-use";
+import "@theme-toggles/react/css/Classic.css"
+import { Classic } from "@theme-toggles/react"
+import { useTheme } from "../../providers/ThemeProvider";
 
 const iam = [
     "Developer!",
@@ -94,8 +97,11 @@ const SocialLinks = styled.div`
     flex-direction: column;
     float: left;
     padding: 16px;
-    svg {
+    & > * {
         transition: all 250ms ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:hover {
             transition: all 250ms ease-out;
             background-color: var(--background-primary);
@@ -116,6 +122,8 @@ const Profile = styled.img`
 
 export const HomeHeader = () => {
     const { width } = useWindowSize()
+    const { themeName, toggleTheme } = useTheme();
+
     return (
         <Wrapper>
             <ImageContainer>
@@ -124,6 +132,16 @@ export const HomeHeader = () => {
                     <a href="https://linkedin.jhasuraj.com" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
                     <a href="https://github.jhasuraj.com" target="_blank" rel="noopener noreferrer"><GitHubIcon /></a>
                     <a href="https://twitter.jhasuraj.com" target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
+                    <Classic
+                        duration={200}
+                        toggled={themeName === 'light'}
+                        toggle={toggleTheme}
+                        style={{
+                            aspectRatio: '1/1',
+                            fontSize: '24px',
+                            color: 'var(--color-primary_theme)'
+                        }}
+                    />
                 </SocialLinks>}
                 <Profile loading="lazy" src={profileImage} alt="" width={413} height={550} />
             </ImageContainer>

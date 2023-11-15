@@ -1,8 +1,11 @@
-import { useContext,  } from 'react';
+import { useContext, useState, createContext, useMemo, useCallback } from 'react';
 import {
     ThemeContext as StyledThemeContext,
     ThemeProvider as StyledThemeProvider
 } from 'styled-components';
+
+
+export type ThemeName = 'dark' | 'light'
 
 export interface Theme {
     color: {
@@ -79,18 +82,53 @@ const darkTheme: Theme = {
     },
 };
 
+const themeMap: Record<ThemeName, Theme> = {
+    light: lightTheme,
+    dark: darkTheme,
+}
+
+export interface IThemeContext {
+    toggleTheme: () => void
+    themeName: ThemeName
+    theme: Theme
+}
+
+const defaultThemeState: IThemeContext = {
+    toggleTheme: () => { },
+    themeName: 'dark',
+    theme: themeMap['dark'],
+}
+
+const ThemeContext = createContext<IThemeContext>(defaultThemeState)
+
 export interface ThemeProviderProps {
     children: React.ReactNode | React.ReactNode[]
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
+
+    const [themeName, setThemeName] = useState<ThemeName>(defaultThemeState.themeName);
+
+    const toggleTheme = useCallback(() => {
+        if(themeName === 'dark') setThemeName('light')
+        else setThemeName('dark')
+    }, [setThemeName, themeName])
+
+    const themeContextValue: IThemeContext = useMemo<IThemeContext>(() => ({
+        toggleTheme,
+        theme: themeMap[themeName],
+        themeName,
+    }), [toggleTheme, themeName])
+
     return (
-        <StyledThemeProvider theme={darkTheme}>
-          {children}
-        </StyledThemeProvider>
+        <ThemeContext.Provider value={themeContextValue}>
+            <StyledThemeProvider theme={themeMap[themeName]}>
+                {children}
+            </StyledThemeProvider>
+        </ThemeContext.Provider>
     )
 }
 
-export function useTheme(): Theme {
-    return useContext(StyledThemeContext);
+export function useTheme(): IThemeContext {
+    return useContext(ThemeContext);
 }
