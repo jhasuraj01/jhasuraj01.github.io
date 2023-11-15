@@ -1,11 +1,10 @@
+import { Classic } from "@theme-toggles/react";
+import "@theme-toggles/react/css/Classic.css";
 import { NavLink } from "react-router-dom";
+import { useTheme } from "../../providers/ThemeProvider";
 import { NavItem } from "../nav-item/NavItem";
 import styles from "./Header.module.scss";
-import "@theme-toggles/react/css/Classic.css"
-import { Classic } from "@theme-toggles/react"
-import { useTheme } from "../../providers/ThemeProvider";
 
-<Classic duration={750} />
 export const Header = () => {
   const { themeName, toggleTheme } = useTheme();
 

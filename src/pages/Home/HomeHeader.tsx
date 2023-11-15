@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { RollingText } from "../../components/rolling-text/RollingText";
-import profileImage from '../../assets/profile2.jpg'
-import { HomeHighlights } from "./HomeHighlights";
-import MailIcon from "../../assets/contact-icons-outlined/mail.svg?react"
-import LinkedInIcon from "../../assets/contact-icons-outlined/linkedin.svg?react"
-import GitHubIcon from "../../assets/contact-icons-outlined/github.svg?react"
-import TwitterIcon from "../../assets/contact-icons-outlined/twitter.svg?react"
+import { Classic } from "@theme-toggles/react";
+import "@theme-toggles/react/css/Classic.css";
 import { useWindowSize } from "react-use";
-import "@theme-toggles/react/css/Classic.css"
-import { Classic } from "@theme-toggles/react"
+import styled from "styled-components";
+import GitHubIcon from "../../assets/contact-icons-outlined/github.svg?react";
+import LinkedInIcon from "../../assets/contact-icons-outlined/linkedin.svg?react";
+import MailIcon from "../../assets/contact-icons-outlined/mail.svg?react";
+import TwitterIcon from "../../assets/contact-icons-outlined/twitter.svg?react";
+import profileImage from '../../assets/profile2.jpg';
+import { RollingText } from "../../components/rolling-text/RollingText";
 import { useTheme } from "../../providers/ThemeProvider";
+import { HomeHighlights } from "./HomeHighlights";
 
 const iam = [
     "Developer!",
