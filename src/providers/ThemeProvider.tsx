@@ -1,4 +1,4 @@
-import { useContext, useState, createContext, useMemo, useCallback } from 'react';
+import { createContext, useCallback, useContext, useMemo } from 'react';
 import { useLocalStorage, useMedia } from 'react-use';
 import {
   ThemeProvider as StyledThemeProvider
@@ -93,10 +93,12 @@ export interface IThemeContext {
   theme: Theme
 }
 
+const defaultThemeName: ThemeName = 'dark'
+
 const defaultThemeState: IThemeContext = {
   toggleTheme: () => { },
-  themeName: 'dark',
-  theme: themeMap['dark'],
+  themeName: defaultThemeName,
+  theme: themeMap[defaultThemeName],
 }
 
 const ThemeContext = createContext<IThemeContext>(defaultThemeState)
@@ -122,13 +124,13 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   const themeContextValue: IThemeContext = useMemo<IThemeContext>(() => ({
     toggleTheme,
-    theme: themeMap[themeName ?? 'dark'],
-    themeName: themeName ?? 'dark',
+    theme: themeMap[themeName ?? defaultThemeName],
+    themeName: themeName ?? defaultThemeName,
   }), [toggleTheme, themeName])
 
   return (
     <ThemeContext.Provider value={themeContextValue}>
-      <StyledThemeProvider theme={themeMap[themeName]}>
+      <StyledThemeProvider theme={themeMap[themeName ?? defaultThemeName]}>
         {children}
       </StyledThemeProvider>
     </ThemeContext.Provider>
