@@ -1,12 +1,15 @@
-import styled from "styled-components";
-import { RollingText } from "../../components/rolling-text/RollingText";
-import profileImage from '../../assets/profile2.jpg'
-import { HomeHighlights } from "./HomeHighlights";
-import MailIcon from "../../assets/contact-icons-outlined/mail.svg?react"
-import LinkedInIcon from "../../assets/contact-icons-outlined/linkedin.svg?react"
-import GitHubIcon from "../../assets/contact-icons-outlined/github.svg?react"
-import TwitterIcon from "../../assets/contact-icons-outlined/twitter.svg?react"
+import { Classic } from "@theme-toggles/react";
+import "@theme-toggles/react/css/Classic.css";
 import { useWindowSize } from "react-use";
+import styled from "styled-components";
+import GitHubIcon from "../../assets/contact-icons-outlined/github.svg?react";
+import LinkedInIcon from "../../assets/contact-icons-outlined/linkedin.svg?react";
+import MailIcon from "../../assets/contact-icons-outlined/mail.svg?react";
+import TwitterIcon from "../../assets/contact-icons-outlined/twitter.svg?react";
+import profileImage from '../../assets/profile2.jpg';
+import { RollingText } from "../../components/rolling-text/RollingText";
+import { useTheme } from "../../providers/ThemeProvider";
+import { HomeHighlights } from "./HomeHighlights";
 
 const iam = [
     "Developer!",
@@ -31,7 +34,7 @@ const ImageContainer = styled.div`
     position: sticky;
     top: 120px;
     flex: 1 2 45%;
-    background-color: var(--background-theme);
+    background-color: var(--background-secondary_theme);
 
     @media (max-width: 1200px) {
         flex: auto;
@@ -70,7 +73,7 @@ const HeadLine = styled.div`
     }
 `
 const ThemeColor = styled.span`
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
 `
 const MySelf = styled.div`
     cursor: crosshair;
@@ -84,7 +87,7 @@ const MySelf = styled.div`
             opacity: 0.5;
         }
         strong {
-            color: var(--color-theme)
+            color: var(--color-primary_theme)
         }
     }
 `
@@ -94,11 +97,14 @@ const SocialLinks = styled.div`
     flex-direction: column;
     float: left;
     padding: 16px;
-    svg {
+    & > * {
         transition: all 250ms ease-in;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:hover {
             transition: all 250ms ease-out;
-            background-color: var(--color-theme_deep);
+            background-color: var(--background-primary);
             border-radius: 50%;
         }
     }
@@ -116,6 +122,8 @@ const Profile = styled.img`
 
 export const HomeHeader = () => {
     const { width } = useWindowSize()
+    const { themeName, toggleTheme } = useTheme();
+
     return (
         <Wrapper>
             <ImageContainer>
@@ -124,6 +132,16 @@ export const HomeHeader = () => {
                     <a href="https://linkedin.jhasuraj.com" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
                     <a href="https://github.jhasuraj.com" target="_blank" rel="noopener noreferrer"><GitHubIcon /></a>
                     <a href="https://twitter.jhasuraj.com" target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
+                    <Classic
+                        duration={200}
+                        toggled={themeName === 'light'}
+                        toggle={toggleTheme}
+                        style={{
+                            aspectRatio: '1/1',
+                            fontSize: '24px',
+                            color: 'var(--color-primary_theme)'
+                        }}
+                    />
                 </SocialLinks>}
                 <Profile loading="lazy" src={profileImage} alt="" width={413} height={550} />
             </ImageContainer>

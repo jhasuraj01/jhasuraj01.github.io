@@ -10,7 +10,7 @@ const Wrapper = styled.a`
     gap: 24px;
     border-radius: 8px;
 
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--border-primary_theme);
     transition: all 250ms ease-in-out;
 
     &:hover {
@@ -31,7 +31,7 @@ const ProfileDescription = styled.div`
 `
 const ProfileValue = styled.div`
     font-size: 20px;
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
 `
 
 export interface ProfileLinkProps {

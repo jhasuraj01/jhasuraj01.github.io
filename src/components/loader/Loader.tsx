@@ -7,13 +7,14 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 250px);
+    /* 100vh - 120px (header size) - 32px (top and bottom margin) */
+    min-height: calc(100vh - 152px);
 `
 
 const Text = styled.div`
     width: 120px;
     font-size: 24px;
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
 `
 
 export const Loader = () => {

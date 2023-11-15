@@ -6,6 +6,7 @@ import { HomeHeader } from "./HomeHeader";
 import { LatestProjects } from "./LatestProjects";
 import { ProblemSolving } from "./ProblemSolving";
 import { Skills } from "./Skills";
+import { useLayoutEffect } from "react";
 
 const ilike = [
     "I like Photography!",
@@ -20,6 +21,11 @@ const LikesContainer = styled.div`
     align-content: center;
 `
 const Home = () => {
+    
+    useLayoutEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }, [])
+
     return (
         <>
             <HomeHeader />

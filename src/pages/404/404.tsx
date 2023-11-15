@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
@@ -19,12 +20,16 @@ const Title = styled.div`
 
 const Description = styled.div`
     font-size: 16px;
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
     text-align: center;
 `
 
 const Page404 = () => {
     const location = useLocation()
+
+    useLayoutEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }, [])
 
     return (
         <Container>

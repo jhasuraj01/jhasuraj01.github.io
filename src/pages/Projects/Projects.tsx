@@ -3,6 +3,7 @@ import { RollingText } from "../../components/rolling-text/RollingText";
 import { projects } from "../../data/projects";
 import { ProjectCard } from "../../components/project-card/ProjectCard";
 import { SocialConnect } from "../Links/SocialConnect";
+import { useLayoutEffect } from "react";
 
 const domain = [
     "Frontend Web",
@@ -41,6 +42,11 @@ const ProjectsContainer = styled.div`
 `
 
 const Projects = () => {
+
+    useLayoutEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }, [])
+
     return (
         <>
         <ProjectHeader>

@@ -11,7 +11,7 @@ const Wraper = styled.div`
     flex-direction: column;
     gap: 128px;
     padding: 128px 64px;
-    background-color: var(--background-theme);
+    background-color: var(--background-secondary_theme);
     
     @media (max-width: 600px) {
         padding: 128px 0;
