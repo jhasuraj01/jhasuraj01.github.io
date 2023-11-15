@@ -1,6 +1,6 @@
 import { useContext, useState, createContext, useMemo, useCallback } from 'react';
+import { useLocalStorage, useMedia } from 'react-use';
 import {
-  ThemeContext as StyledThemeContext,
   ThemeProvider as StyledThemeProvider
 } from 'styled-components';
 
@@ -105,19 +105,25 @@ export interface ThemeProviderProps {
   children: React.ReactNode | React.ReactNode[]
 }
 
-export function ThemeProvider({ children }: ThemeProviderProps) {
 
-  const [themeName, setThemeName] = useState<ThemeName>(defaultThemeState.themeName);
+export function ThemeProvider({ children }: ThemeProviderProps) {
+  
+  const isLightModePrefered = useMedia('(prefers-color-scheme: light)');
+  const [themeName, setThemeName] = useLocalStorage<ThemeName>('theme', (isLightModePrefered ? 'light' : 'dark'), { raw: true });
 
   const toggleTheme = useCallback(() => {
-    if (themeName === 'dark') setThemeName('light')
-    else setThemeName('dark')
+    if (themeName !== 'dark') {
+      setThemeName('dark')
+    }
+    else {
+      setThemeName('light')
+    }
   }, [setThemeName, themeName])
 
   const themeContextValue: IThemeContext = useMemo<IThemeContext>(() => ({
     toggleTheme,
-    theme: themeMap[themeName],
-    themeName,
+    theme: themeMap[themeName ?? 'dark'],
+    themeName: themeName ?? 'dark',
   }), [toggleTheme, themeName])
 
   return (
