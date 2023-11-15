@@ -9,7 +9,7 @@ const Card = styled.a`
     padding: 8px 0 0;
     gap: 16px;
     min-width: 300px;
-    border-top: 2px solid var(--card-border);
+    border-top: 2px solid var(--border-primary_theme);
 `
 const CardDetail = styled.div`
     display: flex;
@@ -44,8 +44,8 @@ const Tag = styled.div`
     font-size: 14px;
     display: flex;
     padding: 8px 12px;
-    color: var(--color-theme_deep);
-    background: var(--background-theme_deep);
+    color: var(--color-secondary_theme);
+    background: var(--background-primary_theme);
     border-radius: 34px;
 `
 const CardIcons = styled.div`

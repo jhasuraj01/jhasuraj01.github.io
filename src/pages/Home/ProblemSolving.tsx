@@ -5,7 +5,7 @@ import totalProblems from "./utils/totalProblems";
 import variables from "../../data/variables.json"
 
 const Wrapper = styled.section`
-    background-color: var(--background-theme);
+    background-color: var(--background-secondary_theme);
 `
 
 const SectionTitle = styled.div`
@@ -111,7 +111,7 @@ export const ProblemSolving = () => {
                                 <PlatformName>{rating.platform}</PlatformName>
                                 <ProblemsCount>{rating.problemsCount}</ProblemsCount>
                             </StatsText>
-                            <ProgressBar color="var(--card-border)" background="white" percent={rating.problemsCount / maxCount * 100} height="20px" />
+                            <ProgressBar color="var(--border-primary_theme)" background="var(--background-primary)" percent={rating.problemsCount / maxCount * 100} height="20px" />
                         </ProblemStats>
                     )
                 })}

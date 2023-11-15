@@ -12,7 +12,7 @@ const Container = styled.div`
     align-items: center;
     padding: 24px 32px;
     gap: 9px;
-    border: 2px solid var(--card-border-light);
+    border: 2px solid var(--border-secondary);
     border-radius: 16px;
 `
 
@@ -27,7 +27,7 @@ const Title = styled.div`
 const Data = styled.div`
     font-size: 40px;
     text-align: center;
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
 `
 
 export const Highlight = ({ title, data }: HighlightProps) => {

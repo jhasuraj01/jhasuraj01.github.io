@@ -18,6 +18,8 @@ export interface Theme {
         themeSecondary: string
     }
     border: {
+        primary: string
+        secondary: string
         themePrimary: string
         themeSecondary: string
     }
@@ -29,20 +31,22 @@ export interface Theme {
 
 const lightTheme: Theme = {
     color: {
-        primary: "#303030",
-        secondary: "#5A5A5A",
-        themePrimary: "#8D33FF",
-        themeSecondary: "#FFFFFF",
+        primary: "hsl(0, 0%, 15%)",
+        secondary: "hsl(0, 0%, 35%)",
+        themePrimary: "hsl(266, 100%, 60%)",
+        themeSecondary: "hsl(0, 0%, 100%)",
     },
     background: {
-        primary: "#FFFFFF",
-        secondary: "#B780FF",
-        themePrimary: "#F1E6FF",
-        themeSecondary: "#9A4DFF",
+        primary: "hsl(0, 0%, 100%)",
+        secondary: "hsl(266, 100%, 75%)",
+        themePrimary: "hsl(266, 100%, 65%)",
+        themeSecondary: "hsl(266, 100%, 95%)",
     },
     border: {
-        themePrimary: "#9A4DFF",
-        themeSecondary: "#F1E6FF",
+        primary: "hsl(0, 0%, 50%)",
+        secondary: "hsl(0, 0%, 95%)",
+        themePrimary: "hsl(266, 100%, 65%)",
+        themeSecondary: "hsl(266, 100%, 85%)",
     },
     scroll: {
         thumb: "hsl(0, 0%, 70%)",
@@ -52,24 +56,26 @@ const lightTheme: Theme = {
 
 const darkTheme: Theme = {
     color: {
-        primary: "#9e9e9e",
-        secondary: "#5A5A5A",
-        themePrimary: "#a866ff",
-        themeSecondary: "#4200a7",
+        primary: "hsl(0, 0%, 80%)",
+        secondary: "hsl(0, 0%, 60%)",
+        themePrimary: "hsl(266, 100%, 75%)",
+        themeSecondary: "hsl(266, 100%, 5%)",
     },
     background: {
-        primary: "#0e1011",
-        secondary: "#30007f",
-        themePrimary: "#15191a",
-        themeSecondary: "#080014",
+        primary: "hsl(0, 0%, 10%)",
+        secondary: "hsl(266, 100%, 75%)",
+        themePrimary: "hsl(266, 100%, 75%)",
+        themeSecondary: "hsl(266, 100%, 1%)",
     },
     border: {
-        themePrimary: "#9A4DFF",
-        themeSecondary: "#1a1a1a",
+        primary: "hsl(0, 0%, 50%)",
+        secondary: "hsl(0, 0%, 7%)",
+        themePrimary: "hsl(266, 100%, 65%)",
+        themeSecondary: "hsl(266, 100%, 50%)",
     },
     scroll: {
-        thumb: "#CCCCCC",
-        thumbHover: "#B3B3B3",
+        thumb: "hsl(0, 0%, 30%)",
+        thumbHover: "hsl(0, 0%, 40%)",
     },
 };
 
@@ -79,7 +85,7 @@ export interface ThemeProviderProps {
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
     return (
-        <StyledThemeProvider theme={lightTheme}>
+        <StyledThemeProvider theme={darkTheme}>
           {children}
         </StyledThemeProvider>
     )

@@ -14,7 +14,7 @@ const Container = styled.div`
 const Text = styled.div`
     width: 120px;
     font-size: 24px;
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
 `
 
 export const Loader = () => {

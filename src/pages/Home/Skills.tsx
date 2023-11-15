@@ -19,7 +19,7 @@ const KeySkills = styled.div`
     font-weight: 700;
     font-size: 24px;
     padding: 0 16px;
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
     text-align: center;
 
     @media (max-width: 500px) {
@@ -36,7 +36,7 @@ const SkillsContainer = styled.div`
     }
 `
 const TypeSeperator = styled.div`
-    background-color: var(--card-border-light);
+    background-color: var(--border-secondary_theme);
     flex-basis: 2px;
     align-self: stretch;
 `

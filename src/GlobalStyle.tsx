@@ -2,20 +2,23 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   html {
-    --color: ${props => props.theme.color.primary};
+    /* Text Colors */
+    --color-primary: ${props => props.theme.color.primary};
     --color-secondary: ${props => props.theme.color.secondary};
-    --color-theme: ${props => props.theme.color.themePrimary};
-    --color-nav: ${props => props.theme.background.secondary};
-    --card-border: ${props => props.theme.border.themePrimary};
-    --card-border-light: ${props => props.theme.border.themeSecondary};
-    --background-theme: ${props => props.theme.background.themePrimary};
-    --color-theme_deep: ${props => props.theme.color.themeSecondary};
-    --background-theme_deep: ${props => props.theme.background.themeSecondary}; 
+    --color-primary_theme: ${props => props.theme.color.themePrimary};
+    --color-secondary_theme: ${props => props.theme.color.themeSecondary};
+    /* Background Colors */
+    --background-primary: ${props => props.theme.background.primary};
+    --background-secondary: ${props => props.theme.background.secondary};
+    --background-primary_theme: ${props => props.theme.background.themePrimary};
+    --background-secondary_theme: ${props => props.theme.background.themeSecondary};
+    /* Border Colors */
+    --border-primary: ${props => props.theme.border.primary};
+    --border-secondary: ${props => props.theme.border.secondary};
+    --border-primary_theme: ${props => props.theme.border.themePrimary};
+    --border-secondary_theme: ${props => props.theme.border.themeSecondary};
+    /* Scrollbar Colors */
     --scrollbar-thumb: ${props => props.theme.scroll.thumb};
     --scrollbar-thumb_hover: ${props => props.theme.scroll.thumbHover};
-  }
-  body {
-    background: ${props => props.theme.background.primary};
-    color: ${props => props.theme.color.primary};
   }
 `

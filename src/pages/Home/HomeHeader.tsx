@@ -31,7 +31,7 @@ const ImageContainer = styled.div`
     position: sticky;
     top: 120px;
     flex: 1 2 45%;
-    background-color: var(--background-theme);
+    background-color: var(--background-secondary_theme);
 
     @media (max-width: 1200px) {
         flex: auto;
@@ -70,7 +70,7 @@ const HeadLine = styled.div`
     }
 `
 const ThemeColor = styled.span`
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
 `
 const MySelf = styled.div`
     cursor: crosshair;
@@ -84,7 +84,7 @@ const MySelf = styled.div`
             opacity: 0.5;
         }
         strong {
-            color: var(--color-theme)
+            color: var(--color-primary_theme)
         }
     }
 `
@@ -98,7 +98,7 @@ const SocialLinks = styled.div`
         transition: all 250ms ease-in;
         &:hover {
             transition: all 250ms ease-out;
-            background-color: var(--color-theme_deep);
+            background-color: var(--background-primary);
             border-radius: 50%;
         }
     }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { IExperience, experiences } from "../../data/experience";
 
 const Wrapper = styled.section`
-    background-color: var(--background-theme);
+    background-color: var(--background-secondary_theme);
 `
 const SectionTitle = styled.div`
     padding: 72px 0;
@@ -38,8 +38,8 @@ const CompanyCardWrapper = styled.div`
     padding: 32px;
     gap: 16px;
     max-width: 1000px;
-    background-color: var(--color-theme_deep);
-    border-bottom: 2px solid var(--color-theme);
+    background-color: var(--background-primary);
+    border-bottom: 2px solid var(--color-primary_theme);
     border-radius: 8px;
 `;
 const DateLocation = styled.div`
@@ -69,7 +69,7 @@ const LearnMore = styled(Link)`
     align-self: flex-end;
     font-size: 16px;
     text-align: right;
-    color: var(--color-theme);
+    color: var(--color-primary_theme);
 `;
 
 const CompanyCard = ({ duration, company, role, description, location, link, skills }: IExperience) => {

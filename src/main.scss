@@ -10,6 +10,8 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--color-primary);
+  background: var(--background-primary);
 }
 
 * {
@@ -30,7 +32,7 @@ $scroll-bar-width: 4px;
 @mixin scrollbar {
   html {
     scrollbar-gutter: stable both-edges;
-    background-color: var(--background-theme);
+    background-color: var(--background-secondary_theme);
   }
 
   body {
