@@ -24,7 +24,7 @@ export const Header = () => {
           toggle={toggleTheme}
           style={{
               aspectRatio: '1/1',
-              fontSize: '24px',
+              fontSize: 'inherit',
               color: 'var(--color-primary_theme)'
           }}
         />
