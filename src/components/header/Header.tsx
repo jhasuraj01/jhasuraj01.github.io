@@ -1,5 +1,5 @@
-import { Classic } from "@theme-toggles/react";
-import "@theme-toggles/react/css/Classic.css";
+import { Expand } from "@theme-toggles/react";
+import "@theme-toggles/react/css/Expand.css";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../../providers/ThemeProvider";
 import { NavItem } from "../nav-item/NavItem";
@@ -18,9 +18,9 @@ export const Header = () => {
         <NavItem to='/projects' text='projects' />
         <NavItem to='/links' text='links' />
         <NavItem to='//jhasuraj.com/blog' text='blog' target='_blank' />
-        <Classic
+        <Expand
           duration={200}
-          toggled={themeName === 'light'}
+          toggled={themeName === 'dark'}
           toggle={toggleTheme}
           style={{
               aspectRatio: '1/1',
