@@ -1,5 +1,5 @@
-import { Classic } from "@theme-toggles/react";
-import "@theme-toggles/react/css/Classic.css";
+import { Expand } from "@theme-toggles/react";
+import "@theme-toggles/react/css/Expand.css";
 import { useWindowSize } from "react-use";
 import styled from "styled-components";
 import GitHubIcon from "../../assets/contact-icons-outlined/github.svg?react";
@@ -132,9 +132,9 @@ export const HomeHeader = () => {
                     <a href="https://linkedin.jhasuraj.com" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
                     <a href="https://github.jhasuraj.com" target="_blank" rel="noopener noreferrer"><GitHubIcon /></a>
                     <a href="https://twitter.jhasuraj.com" target="_blank" rel="noopener noreferrer"><TwitterIcon /></a>
-                    <Classic
+                    <Expand
                         duration={200}
-                        toggled={themeName === 'light'}
+                        toggled={themeName === 'dark'}
                         toggle={toggleTheme}
                         style={{
                             aspectRatio: '1/1',
