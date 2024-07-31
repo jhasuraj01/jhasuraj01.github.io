@@ -18,7 +18,16 @@ export interface IExperience {
 
 export const experiences: IExperience[] = [
     {
-        duration: 'Aug 2023 - Present',
+        "duration": "Jul 2024 - Present",
+        "company": "Barclays",
+        "role": "Technology Graduate Developer, BA3",
+        "description": "Completed Barclays Foundational Training. Interacted with Business Analysts, System Analysts, DevOps, and the Delivery Team. Studied the System Architecture of Barclays Partner Finance.",
+        "location": "Pune, Maharashtra, India",
+        "skills": "Software Engineering",
+        "type": JobTypeEnum.FULL_TIME,
+    },
+    {
+        duration: 'Aug 2023 - Jun 2024',
         company: 'Cypherock',
         role: 'Full Stack Developer Intern',
         description: `Working with Cypherock X1 hardware wallet & adding new features in cySync Desktop App. Developed AI-powered automation tools for Lead Generation with 85% success rate.`,
@@ -29,10 +38,10 @@ export const experiences: IExperience[] = [
     {
         duration: 'Jun 2023 - Aug 2023',
         company: 'Barclays',
-        role: 'Product Technology, Summer Intern',
+        role: 'Backend Developer Summer Intern',
         description: `Developed Synchronous and Asynchronous APIs using AWS Lambda, API Gateway, S3, SNS, SES, State Machine, Event Bridge, AWS X-Ray, AWS Cognito, Cloud Formation, DynamoDB, and Java Spring Boot. Implemented end-to-end traceability and logic to catch and notify errors in a live environment.`,
         location: 'Pune, Maharashtra, India',
-        skills: "Amazon Web Services (AWS), Spring Boot, Java",
+        skills: "Amazon Web Services (AWS), Java Spring Boot",
         type: JobTypeEnum.INTERNSHIP,
     },
     {
