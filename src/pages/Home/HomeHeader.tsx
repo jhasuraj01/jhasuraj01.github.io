@@ -6,7 +6,7 @@ import GitHubIcon from "../../assets/contact-icons-outlined/github.svg?react";
 import LinkedInIcon from "../../assets/contact-icons-outlined/linkedin.svg?react";
 import MailIcon from "../../assets/contact-icons-outlined/mail.svg?react";
 import TwitterIcon from "../../assets/contact-icons-outlined/twitter.svg?react";
-import profileImage from '../../assets/profile2.jpg';
+import profileImage from '../../assets/profile.webp';
 import { RollingText } from "../../components/rolling-text/RollingText";
 import { useTheme } from "../../providers/ThemeProvider";
 import { HomeHighlights } from "./HomeHighlights";
@@ -113,11 +113,10 @@ const SocialLinks = styled.div`
 const Profile = styled.img`
     position: relative;
     float: right;
-    left: -24px;
-    top: -24px;
-    width: 400px;
+    width: 350px;
     height: auto;
     max-width: 80vw;
+    transform: translate3d(-5%, -5%, 0) scale3d(1.1, 1.1, 1);
 `
 
 export const HomeHeader = () => {
@@ -143,7 +142,7 @@ export const HomeHeader = () => {
                         }}
                     />
                 </SocialLinks>}
-                <Profile loading="lazy" src={profileImage} alt="" width={413} height={550} />
+                <Profile loading="lazy" src={profileImage} alt="" width={1318} height={1957} />
             </ImageContainer>
             <InfoContainer>
                 <HeadLine><span>I am</span> <ThemeColor><RollingText sentences={iam}/></ThemeColor></HeadLine>
