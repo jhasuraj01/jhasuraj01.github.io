@@ -47,7 +47,7 @@ const ProblemStats = styled.a`
     display: flex;
     align-items: center;
     gap: 24px;
-    cursor: pointer;
+    cursor: ${({ href }) => href ? 'pointer' : 'default' };
     @media (max-width: 650px) {
         flex-direction: column;
         align-items: stretch;
