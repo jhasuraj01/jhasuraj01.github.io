@@ -2,7 +2,7 @@ import { ProgressBar } from "../../components/progress/ProgressBar";
 import styled from "styled-components";
 import { ratings } from "../../data/programming";
 import totalProblems from "./utils/totalProblems";
-import variables from "../../data/variables.json"
+// import variables from "../../data/variables.json"
 
 const Wrapper = styled.section`
     background-color: var(--background-secondary_theme);

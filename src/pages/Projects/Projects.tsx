@@ -56,7 +56,7 @@ const Projects = () => {
         <ProjectsContainer>
             { projects.map(project => <ProjectCard {...project} /> )}
         </ProjectsContainer>
-        <SocialConnect />
+        <SocialConnect showThemeBg />
         </>
     );
 }

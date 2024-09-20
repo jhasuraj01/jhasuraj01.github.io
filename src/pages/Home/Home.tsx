@@ -4,7 +4,7 @@ import { SocialConnect } from "../Links/SocialConnect";
 import { Experience } from "./Experience";
 import { HomeHeader } from "./HomeHeader";
 import { LatestProjects } from "./LatestProjects";
-import { ProblemSolving } from "./ProblemSolving";
+// import { ProblemSolving } from "./ProblemSolving";
 import { Skills } from "./Skills";
 import { useLayoutEffect } from "react";
 
@@ -34,8 +34,8 @@ const Home = () => {
             </LikesContainer>
             <Experience />
             <LatestProjects />
-            <ProblemSolving />
-            <Skills />
+            {/* <ProblemSolving /> */}
+            <Skills showThemeBg />
             <SocialConnect />
         </>
     );

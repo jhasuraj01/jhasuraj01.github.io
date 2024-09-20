@@ -16,7 +16,7 @@ export const Header = () => {
         {/* <NavItem link='/gallery' text='gallery' /> */}
         {/* <NavItem link='/programming' text='programming' /> */}
         <NavItem to='/projects' text='projects' />
-        <NavItem to='/links' text='links' />
+        {/* <NavItem to='/links' text='links' /> */}
         <NavItem to='//jhasuraj.com/blog' text='blog' target='_blank' />
         <Expand
           duration={200}

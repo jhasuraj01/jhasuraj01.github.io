@@ -4,14 +4,15 @@ import MailIcon from "../../assets/contact-icons-filled/mail.svg?react"
 import LinkedInIcon from "../../assets/contact-icons-filled/linkedin.svg?react"
 import GitHubIcon from "../../assets/contact-icons-filled/github.svg?react"
 import TwitterIcon from "../../assets/contact-icons-filled/twitter.svg?react"
+import React from "react";
 
-const Wraper = styled.div`
+const Wraper = styled.div<{showThemeBg: boolean}>`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 128px;
     padding: 128px 64px;
-    background-color: var(--background-secondary_theme);
+    ${({ showThemeBg }) => showThemeBg ? 'background-color: var(--background-secondary_theme);' : ''}
     
     @media (max-width: 600px) {
         padding: 128px 0;
@@ -41,9 +42,13 @@ const SocialLinkContainer = styled.div`
     gap: 40px;
 `
 
-export const SocialConnect = () => {
+export interface SocialConnectProps {
+    showThemeBg?: boolean
+}
+
+export const SocialConnect: React.FC<SocialConnectProps> = ({ showThemeBg = false }) => {
     return (
-        <Wraper>
+        <Wraper showThemeBg={showThemeBg}>
             <SectionHeader>
                 <SectionSubtitle>Let's get in Touch!</SectionSubtitle>
                 <SectionTitle>Connect With Me</SectionTitle>

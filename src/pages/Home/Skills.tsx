@@ -1,10 +1,12 @@
+import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.section`
+const Wrapper = styled.div<{showThemeBg: boolean}>`
     display: flex;
     flex-direction: column;
     padding: 72px 0;
     gap: 72px;
+    ${({ showThemeBg }) => showThemeBg ? 'background-color: var(--background-secondary_theme);' : ''}
 `
 const SectionTitle = styled.div`
     font-weight: 700;
@@ -55,9 +57,13 @@ const Skill = styled.div`
     font-size: 16px;
 `
 
-export const Skills = () => {
+export interface SkillsProps {
+    showThemeBg?: boolean
+}
+
+export const Skills: React.FC<SkillsProps> = ({ showThemeBg = false }) => {
     return (
-        <Wrapper>
+        <Wrapper showThemeBg={showThemeBg}>
             <SectionTitle>Skills</SectionTitle>
             <KeySkills>Data Structures and Algorithms, UI&nbsp;&amp;&nbsp;UX, Web&nbsp;Development</KeySkills>
             <SkillsContainer>
