@@ -6,30 +6,34 @@ import variables from "../../data/variables.json"
 
 const Wrapper = styled.section`
     background-color: var(--background-secondary_theme);
+    padding: 72px 0;
+    @media (max-width: 650px) {
+        padding: max(10vw, 32px) 0;
+    }
 `
 
 const SectionTitle = styled.div`
-    padding: 72px 0;
+    padding: 0 0 72px 0;
     font-weight: 700;
     font-size: 64px;
     text-align: center;
 
     @media (max-width: 650px) {
         font-size: max(10vw, 32px);
-        padding: max(10vw, 32px) 0;
+        padding: 0 0 max(10vw, 32px) 0;
     }
 `
-const SectionHighlight = styled.div`
-    padding: 72px 0;
-    text-align: center;
-    font-weight: 400;
-    font-size: 64px;
+// const SectionHighlight = styled.div`
+//     padding: 72px 0;
+//     text-align: center;
+//     font-weight: 400;
+//     font-size: 64px;
     
-    @media (max-width: 650px) {
-        font-size: max(10vw, 32px);
-        padding: max(10vw, 32px) 0;
-    }
-`
+//     @media (max-width: 650px) {
+//         font-size: max(10vw, 32px);
+//         padding: max(10vw, 32px) 0;
+//     }
+// `
 
 const StatsContainer = styled.div`
     display: flex;
@@ -116,7 +120,7 @@ export const ProblemSolving = () => {
                     )
                 })}
             </StatsContainer>
-            <SectionHighlight>{variables.codechef.stars} on CodeChef</SectionHighlight>
+            {/* <SectionHighlight>{variables.codechef.stars} on CodeChef</SectionHighlight> */}
             
         </Wrapper>
     )
