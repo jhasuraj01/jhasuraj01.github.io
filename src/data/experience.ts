@@ -18,12 +18,12 @@ export interface IExperience {
 
 export const experiences: IExperience[] = [
     {
-        "duration": "Aug 2024 - Aug 2024",
+        "duration": "Aug 2024 - Present",
         "company": "Uber",
         "role": "Software Engineer 1",
-        "description": "Onboarding and began actively participating in the development and maintenance of Uber's internal developer tools, Slate and Studio, focusing on enhancing platform reliability and developer productivity.",
+        "description": "Contributing to Uber's internal developer tool, Slate, by empowering developers to run end-to-end tests in the production environment during the development phase, significantly boosting platform reliability and enhancing developer productivity.",
         "location": "Bengaluru, Karnataka, India",
-        "skills": "Software Engineering, React, Go",
+        "skills": "React, Go, SQL",
         "type": JobTypeEnum.FULL_TIME,
     },
     {
