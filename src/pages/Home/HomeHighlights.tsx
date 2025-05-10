@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Highlight } from "../../components/highlight/Highlight";
 import totalProblems from "./utils/totalProblems";
@@ -22,8 +21,6 @@ export const HomeHighlights = () => {
             <Highlight title="Total Companies" data={new Set(experiences.map(e => e.company)).size.toString()} />
             <Highlight title="DSA Problems Solved" data={`+${totalProblems()}`} />
             <Highlight title="Research Papers" data="5" />
-            {/* <Link to="/projects"><Highlight title="Projects" data="+10" /></Link>
-            <Highlight title="Certifications" data="+16" /> */}
         </Wrapper>
     );
 }
