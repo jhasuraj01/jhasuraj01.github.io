@@ -10,13 +10,13 @@ import profileImage from '../../assets/profile.webp';
 import { RollingText } from "../../components/rolling-text/RollingText";
 import { useTheme } from "../../providers/ThemeProvider";
 import { HomeHighlights } from "./HomeHighlights";
+import { dateDiff } from "./utils/dateDiff";
+import { experiences } from "../../data/experience";
 
 const iam = [
-    "Developer!",
-    "Designer!",
     "Engineer!",
-    "Educator!",
-    "Student!"
+    "Learner!",
+    "Traveller!",
 ]
 
 const Wrapper = styled.section`
@@ -122,6 +122,8 @@ const Profile = styled.img`
 export const HomeHeader = () => {
     const { width } = useWindowSize()
     const { themeName, toggleTheme } = useTheme();
+    const careerStart = new Date("20 Aug, 2024")
+    const today = new Date()
 
     return (
         <Wrapper>
@@ -147,15 +149,21 @@ export const HomeHeader = () => {
             <InfoContainer>
                 <HeadLine><span>I am</span> <ThemeColor><RollingText sentences={iam}/></ThemeColor></HeadLine>
                 <MySelf>
-                    <span>I am currently pursuing BTech. in </span>
-                    <strong>Information Technology</strong>
-                    <span> and Engineering with Honors in </span>
-                    <strong>Blockchain</strong>
-                    <span> Technology at Pimpri Chinchwad College of Engineering, Pune. My current CGPA is </span>
-                    <strong>9.11/10</strong>
-                    <span> and I will graduate in </span>
-                    <strong>June 2024</strong>
-                    <span>. I am a technology enthusiast and passionate about programming, design, and art. I love to explore and generally feel excited to learn new things about anything, whether technology related or not.</span>
+                    <span>I graduated with </span>
+                    <strong>BTech. Information Technology </strong>
+                    <span>with Honors in </span>
+                    <strong>Blockchain </strong>
+                    <span> Technology from Pimpri-Chinchwad College of Engineering, Pune. My final CGPA is </span>
+                    <strong>9.11/10. </strong>
+
+                    <span>Currently, I am working at </span>
+                    <strong>{experiences[0].company} </strong>
+                    <span>as </span>
+                    <strong>{experiences[0].role} </strong>
+                    <span>with total </span>
+                    <strong>{dateDiff(careerStart, today)} </strong>
+                    <span>of full-time experience. </span>
+                    <span>I am an AI enthusiast and like to work on complex problems & high scale applications. I love to explore and generally feel excited to learn new things about anything, whether technology related or not.</span>
                 </MySelf>
                 <HomeHighlights />
             </InfoContainer>

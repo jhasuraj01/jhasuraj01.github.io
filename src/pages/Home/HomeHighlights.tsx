@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Highlight } from "../../components/highlight/Highlight";
 import totalProblems from "./utils/totalProblems";
+import { experiences } from "../../data/experience";
+import dateDiff from "./utils/dateDiff";
 
 const Wrapper = styled.div`
     display: grid;
@@ -16,12 +18,12 @@ const Wrapper = styled.div`
 export const HomeHighlights = () => {
     return (
         <Wrapper>
-            <Highlight title="Internships" data="3" />
+            <Highlight title="Software Engineering" data={dateDiff(new Date("Feb 3, 2019"), new Date())} />
+            <Highlight title="Total Companies" data={new Set(experiences.map(e => e.company)).size.toString()} />
             <Highlight title="DSA Problems Solved" data={`+${totalProblems()}`} />
-            <Link to="/projects"><Highlight title="Projects" data="+10" /></Link>
-            <Highlight title="Research Papers" data="3" />
-            <Highlight title="Certifications" data="+16" />
-            <Highlight title="Games Developed" data="+2" />
+            <Highlight title="Research Papers" data="5" />
+            {/* <Link to="/projects"><Highlight title="Projects" data="+10" /></Link>
+            <Highlight title="Certifications" data="+16" /> */}
         </Wrapper>
     );
 }

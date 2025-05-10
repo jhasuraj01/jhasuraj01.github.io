@@ -9,9 +9,9 @@ import { Skills } from "./Skills";
 import { useLayoutEffect } from "react";
 
 const ilike = [
-    "I like Photography!",
-    "I like Travelling!",
-    "I like Music!",
+    "Like - Photography!",
+    "Sports - Badminton!",
+    "Weekends - Cycling!",
 ]
 
 const LikesContainer = styled.div`

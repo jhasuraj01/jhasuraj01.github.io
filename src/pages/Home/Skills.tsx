@@ -65,36 +65,33 @@ export const Skills: React.FC<SkillsProps> = ({ showThemeBg = false }) => {
     return (
         <Wrapper showThemeBg={showThemeBg}>
             <SectionTitle>Skills</SectionTitle>
-            <KeySkills>Data Structures and Algorithms, UI&nbsp;&amp;&nbsp;UX, Web&nbsp;Development</KeySkills>
+            <KeySkills>Data Structures and Algorithms, AWS Cloud, Typescript</KeySkills>
             <SkillsContainer>
                 <TypeWrapper>
                     <SkillType>Programming Language</SkillType>
+                    <Skill>Go</Skill>
                     <Skill>C / C++</Skill>
                     <Skill>TypeScript</Skill>
-                    <Skill>JavaScript</Skill>
                     <Skill>Python</Skill>
                     <Skill>Java</Skill>
-                    <Skill>Assembly</Skill>
                 </TypeWrapper>
                 <TypeSeperator />
                 <TypeWrapper>
-                    <SkillType>Cloud Technology</SkillType>
-                    <Skill>AWS Dynamodb</Skill>
-                    <Skill>AWS Lambda</Skill>
-                    <Skill>AWS App Sync</Skill>
-                    <Skill>Google Firebase</Skill>
-                    <Skill>Google FireStore</Skill>
-                    <Skill>Google App Engine</Skill>
+                    <SkillType>Devops & Cloud</SkillType>
+                    <Skill>AWS Serverless Framework</Skill>
+                    <Skill>Google Cloud Platform</Skill>
+                    <Skill>Docker / Kubernetes</Skill>
+                    <Skill>Terraform / Ansible</Skill>
+                    <Skill>Jenkins / Github Actions</Skill>
                 </TypeWrapper>
                 <TypeSeperator />
                 <TypeWrapper>
-                    <SkillType>Other Technologies</SkillType>
-                    <Skill>Git / GitHub</Skill>
-                    <Skill>React.js / Next.js</Skill>
-                    <Skill>Rest / GraphQL API</Skill>
-                    <Skill>Figma / FigJam</Skill>
-                    <Skill>Lit / Lit HTML</Skill>
-                    <Skill>SCSS / CSS</Skill>
+                    <SkillType>Tech & Frameworks</SkillType>
+                    <Skill>Rest / GraphQL / gRPC</Skill>
+                    <Skill>React / NodeJS</Skill>
+                    <Skill>Java Spring Boot</Skill>
+                    <Skill>SQL: MySQL / Postgresql</Skill>
+                    <Skill>NoSQL: MongoDB / DynamoDB</Skill>
                 </TypeWrapper>
             </SkillsContainer>
         </Wrapper>

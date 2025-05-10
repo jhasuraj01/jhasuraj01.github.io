@@ -3,7 +3,7 @@ import { SocialLink } from "../../components/social-link/SocialLink"
 import MailIcon from "../../assets/contact-icons-filled/mail.svg?react"
 import LinkedInIcon from "../../assets/contact-icons-filled/linkedin.svg?react"
 import GitHubIcon from "../../assets/contact-icons-filled/github.svg?react"
-import TwitterIcon from "../../assets/contact-icons-filled/twitter.svg?react"
+// import TwitterIcon from "../../assets/contact-icons-filled/twitter.svg?react"
 import React from "react";
 
 const Wraper = styled.div<{showThemeBg: boolean}>`
@@ -38,7 +38,7 @@ const SectionTitle = styled.div`
 
 const SocialLinkContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100vw), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(600px, 100vw), 1fr));
     gap: 40px;
 `
 
@@ -59,11 +59,11 @@ export const SocialConnect: React.FC<SocialConnectProps> = ({ showThemeBg = fals
                     title="Email, Official"
                     value="contact@jhasuraj.com"
                     icon={MailIcon} />
-                <SocialLink
+                {/* <SocialLink
                     link="mailto:suraj.jha20@pccoepune.org"
                     title="Email, College"
                     value="suraj.jha20@pccoepune.org"
-                    icon={MailIcon} />
+                    icon={MailIcon} /> */}
                 <SocialLink
                     link="mailto:jhasurajdev@gmail.com"
                     title="Email, Alternate"
@@ -79,11 +79,11 @@ export const SocialConnect: React.FC<SocialConnectProps> = ({ showThemeBg = fals
                     title="GitHub"
                     value="github.com/jhasuraj01"
                     icon={GitHubIcon} />
-                <SocialLink
+                {/* <SocialLink
                     link="https://twitter.jhasuraj.com/"
                     title="Twitter"
                     value="twitter.com/jhasuraj01"
-                    icon={TwitterIcon} />
+                    icon={TwitterIcon} /> */}
             </SocialLinkContainer>
         </Wraper>
         
